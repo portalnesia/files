@@ -1,0 +1,156 @@
+_v1_geodata_transform-coordinates_post:
+  - lang: shell
+    label: Shell + Curl
+    source: |-
+      curl --request POST \
+        --url https://api.portalnesia.com/v1/geodata/transform-coordinates \
+        --header 'Authorization: Bearer REPLACE_BEARER_TOKEN' \
+        --header 'PN-Client-Id: Your client id' \
+        --header 'content-type: application/x-www-form-urlencoded' \
+        --data from=4326 \
+        --data to=3857 \
+        --data 'input=18.5%3B54.2%0A113.4+46.78%0A41%C2%B026'\''47%22N+71%C2%B058'\''36%22W%0A42d26'\''47%22N+72d58'\''36%22W' \
+        --data add_input=true \
+        --data switch=true
+  - lang: javascript
+    label: Node + Axios
+    source: >-
+      var axios = require('axios');
+
+      var qs = require('qs');
+
+
+      var data = qs.stringify({
+         'from': '4326'
+         'to': '3857'
+         'input': '18.5;54.2
+      113.4 46.78
+
+      41°26\'47"N 71°58'36"W
+
+      42d26'47"N 72d58'36"W'
+         'add_input': 'true'
+         'switch': 'true'
+      })
+
+
+      var config = {
+        headers: {
+          'Authorization': 'Bearer REPLACE_BEARER_TOKEN', 
+          'PN-Client-Id': 'Your client id',
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }
+      }
+
+
+      axios.post('https://api.portalnesia.com/v1/geodata/transform-coordinates',data,config)
+
+      .then(function(response){
+        console.log(response.data)
+      })
+
+      .catch(function (error) {
+        console.log('error', error);
+      });
+  - lang: javascript
+    label: Javascript + Xhr
+    source: >-
+      const data =
+      "from=4326&to=3857&input=18.5%253B54.2%250A113.4%2B46.78%250A41%25C2%25B026'47%2522N%2B71%25C2%25B058'36%2522W%250A42d26'47%2522N%2B72d58'36%2522W&add_input=true&switch=true";
+
+
+      const xhr = new XMLHttpRequest();
+
+      xhr.withCredentials = true;
+
+
+      xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === this.DONE) {
+          console.log(this.responseText);
+        }
+      });
+
+
+      xhr.open("POST",
+      "https://api.portalnesia.com/v1/geodata/transform-coordinates");
+
+      xhr.setRequestHeader("PN-Client-Id", "Your client id");
+
+      xhr.setRequestHeader("Authorization", "Bearer REPLACE_BEARER_TOKEN");
+
+      xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+
+
+      xhr.send(data);
+  - lang: php
+    label: Php + Curl
+    source: |-
+      <?php
+
+      $curl = curl_init();
+
+      curl_setopt_array($curl, [
+        CURLOPT_URL => "https://api.portalnesia.com/v1/geodata/transform-coordinates",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "POST",
+        CURLOPT_POSTFIELDS => "from=4326&to=3857&input=18.5%253B54.2%250A113.4%2B46.78%250A41%25C2%25B026'47%2522N%2B71%25C2%25B058'36%2522W%250A42d26'47%2522N%2B72d58'36%2522W&add_input=true&switch=true",
+        CURLOPT_HTTPHEADER => [
+          "Authorization: Bearer REPLACE_BEARER_TOKEN",
+          "PN-Client-Id: Your client id",
+          "content-type: application/x-www-form-urlencoded"
+        ],
+      ]);
+
+      $response = curl_exec($curl);
+      $err = curl_error($curl);
+
+      curl_close($curl);
+
+      if ($err) {
+        echo "cURL Error #:" . $err;
+      } else {
+        echo $response;
+      }
+  - lang: python
+    label: Python + Python3
+    source: >-
+      import http.client
+
+
+      conn = http.client.HTTPSConnection("api.portalnesia.com")
+
+
+      payload =
+      "from=4326&to=3857&input=18.5%253B54.2%250A113.4%2B46.78%250A41%25C2%25B026'47%2522N%2B71%25C2%25B058'36%2522W%250A42d26'47%2522N%2B72d58'36%2522W&add_input=true&switch=true"
+
+
+      headers = {
+          'PN-Client-Id': "Your client id",
+          'Authorization': "Bearer REPLACE_BEARER_TOKEN",
+          'content-type': "application/x-www-form-urlencoded"
+          }
+
+      conn.request("POST", "/v1/geodata/transform-coordinates", payload,
+      headers)
+
+
+      res = conn.getresponse()
+
+      data = res.read()
+
+
+      print(data.decode("utf-8"))
+  - lang: java
+    label: Java + Unirest
+    source: >-
+      HttpResponse<String> response =
+      Unirest.post("https://api.portalnesia.com/v1/geodata/transform-coordinates")
+        .header("PN-Client-Id", "Your client id")
+        .header("Authorization", "Bearer REPLACE_BEARER_TOKEN")
+        .header("content-type", "application/x-www-form-urlencoded")
+        .body("from=4326&to=3857&input=18.5%253B54.2%250A113.4%2B46.78%250A41%25C2%25B026'47%2522N%2B71%25C2%25B058'36%2522W%250A42d26'47%2522N%2B72d58'36%2522W&add_input=true&switch=true")
+        .asString();

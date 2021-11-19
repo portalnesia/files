@@ -1,0 +1,184 @@
+_v1_tools_qr-code-generator_post:
+  - lang: shell
+    label: Shell + Curl
+    source: |-
+      curl --request POST \
+        --url https://api.portalnesia.com/v1/tools/qr-code-generator \
+        --header 'Authorization: Bearer REPLACE_BEARER_TOKEN' \
+        --header 'PN-Client-Id: Your client id' \
+        --header 'content-type: application/x-www-form-urlencoded' \
+        --data type=url \
+        --data url=https%3A%2F%2Fportalnesia.com \
+        --data 'text=sample+text' \
+        --data email=example%40domain.com \
+        --data 'subject=Subject+email' \
+        --data 'email_content=sample+text' \
+        --data telephone=08... \
+        --data 'sms_content=sample+text' \
+        --data first_name=John \
+        --data last_name=Doe \
+        --data 'full_name=John+Doe+' \
+        --data company=string \
+        --data position=string \
+        --data address=string \
+        --data city=string \
+        --data country=string \
+        --data encryption=string \
+        --data ssid=string \
+        --data password=string \
+        --data hidden=string \
+        --data latitude=string \
+        --data longitude=string
+  - lang: javascript
+    label: Node + Axios
+    source: >-
+      var axios = require('axios');
+
+      var qs = require('qs');
+
+
+      var data = qs.stringify({
+         'type': 'url'
+         'url': 'https://portalnesia.com'
+         'text': 'sample text'
+         'email': 'example@domain.com'
+         'subject': 'Subject email'
+         'email_content': 'sample text'
+         'telephone': '08...'
+         'sms_content': 'sample text'
+         'first_name': 'John'
+         'last_name': 'Doe'
+         'full_name': 'John Doe '
+         'company': ''
+         'position': ''
+         'address': ''
+         'city': ''
+         'country': ''
+         'encryption': ''
+         'ssid': ''
+         'password': ''
+         'hidden': ''
+         'latitude': ''
+         'longitude': ''
+      })
+
+
+      var config = {
+        headers: {
+          'Authorization': 'Bearer REPLACE_BEARER_TOKEN', 
+          'PN-Client-Id': 'Your client id',
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }
+      }
+
+
+      axios.post('https://api.portalnesia.com/v1/tools/qr-code-generator',data,config)
+
+      .then(function(response){
+        console.log(response.data)
+      })
+
+      .catch(function (error) {
+        console.log('error', error);
+      });
+  - lang: javascript
+    label: Javascript + Xhr
+    source: >-
+      const data =
+      "type=url&url=https%253A%252F%252Fportalnesia.com&text=sample%2Btext&email=example%2540domain.com&subject=Subject%2Bemail&email_content=sample%2Btext&telephone=08...&sms_content=sample%2Btext&first_name=John&last_name=Doe&full_name=John%2BDoe%2B&company=string&position=string&address=string&city=string&country=string&encryption=string&ssid=string&password=string&hidden=string&latitude=string&longitude=string";
+
+
+      const xhr = new XMLHttpRequest();
+
+      xhr.withCredentials = true;
+
+
+      xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === this.DONE) {
+          console.log(this.responseText);
+        }
+      });
+
+
+      xhr.open("POST",
+      "https://api.portalnesia.com/v1/tools/qr-code-generator");
+
+      xhr.setRequestHeader("PN-Client-Id", "Your client id");
+
+      xhr.setRequestHeader("Authorization", "Bearer REPLACE_BEARER_TOKEN");
+
+      xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+
+
+      xhr.send(data);
+  - lang: php
+    label: Php + Curl
+    source: |-
+      <?php
+
+      $curl = curl_init();
+
+      curl_setopt_array($curl, [
+        CURLOPT_URL => "https://api.portalnesia.com/v1/tools/qr-code-generator",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "POST",
+        CURLOPT_POSTFIELDS => "type=url&url=https%253A%252F%252Fportalnesia.com&text=sample%2Btext&email=example%2540domain.com&subject=Subject%2Bemail&email_content=sample%2Btext&telephone=08...&sms_content=sample%2Btext&first_name=John&last_name=Doe&full_name=John%2BDoe%2B&company=string&position=string&address=string&city=string&country=string&encryption=string&ssid=string&password=string&hidden=string&latitude=string&longitude=string",
+        CURLOPT_HTTPHEADER => [
+          "Authorization: Bearer REPLACE_BEARER_TOKEN",
+          "PN-Client-Id: Your client id",
+          "content-type: application/x-www-form-urlencoded"
+        ],
+      ]);
+
+      $response = curl_exec($curl);
+      $err = curl_error($curl);
+
+      curl_close($curl);
+
+      if ($err) {
+        echo "cURL Error #:" . $err;
+      } else {
+        echo $response;
+      }
+  - lang: python
+    label: Python + Python3
+    source: >-
+      import http.client
+
+
+      conn = http.client.HTTPSConnection("api.portalnesia.com")
+
+
+      payload =
+      "type=url&url=https%253A%252F%252Fportalnesia.com&text=sample%2Btext&email=example%2540domain.com&subject=Subject%2Bemail&email_content=sample%2Btext&telephone=08...&sms_content=sample%2Btext&first_name=John&last_name=Doe&full_name=John%2BDoe%2B&company=string&position=string&address=string&city=string&country=string&encryption=string&ssid=string&password=string&hidden=string&latitude=string&longitude=string"
+
+
+      headers = {
+          'PN-Client-Id': "Your client id",
+          'Authorization': "Bearer REPLACE_BEARER_TOKEN",
+          'content-type': "application/x-www-form-urlencoded"
+          }
+
+      conn.request("POST", "/v1/tools/qr-code-generator", payload, headers)
+
+
+      res = conn.getresponse()
+
+      data = res.read()
+
+
+      print(data.decode("utf-8"))
+  - lang: java
+    label: Java + Unirest
+    source: >-
+      HttpResponse<String> response =
+      Unirest.post("https://api.portalnesia.com/v1/tools/qr-code-generator")
+        .header("PN-Client-Id", "Your client id")
+        .header("Authorization", "Bearer REPLACE_BEARER_TOKEN")
+        .header("content-type", "application/x-www-form-urlencoded")
+        .body("type=url&url=https%253A%252F%252Fportalnesia.com&text=sample%2Btext&email=example%2540domain.com&subject=Subject%2Bemail&email_content=sample%2Btext&telephone=08...&sms_content=sample%2Btext&first_name=John&last_name=Doe&full_name=John%2BDoe%2B&company=string&position=string&address=string&city=string&country=string&encryption=string&ssid=string&password=string&hidden=string&latitude=string&longitude=string")
+        .asString();
