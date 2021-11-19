@@ -54,8 +54,7 @@ paths:
         - OauthUser:
             - blog
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_blog_dashboard.yml#/_v1_blog_dashboard_get
+        $ref: ./example__v1_blog_dashboard.yml#/_v1_blog_dashboard_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -113,8 +112,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: >-
-                            https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/blog_pagination
+                          $ref: ./schemas.yml#/schemas/blog_pagination
               example:
                 error: false
                 message: OK
@@ -158,8 +156,7 @@ paths:
         - OauthUser:
             - blog
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_blog.yml#/_v1_blog_post
+        $ref: ./example__v1_blog.yml#/_v1_blog_post
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -258,8 +255,7 @@ paths:
         - OauthClient:
             - blog
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_blog.yml#/_v1_blog_get
+        $ref: ./example__v1_blog.yml#/_v1_blog_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -317,8 +313,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: >-
-                            https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/blog_pagination
+                          $ref: ./schemas.yml#/schemas/blog_pagination
               example:
                 error: false
                 message: OK
@@ -361,8 +356,7 @@ paths:
         - OauthUser:
             - blog
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_blog_{blog_identity}.yml#/_v1_blog_{blog_identity}_put
+        $ref: ./example__v1_blog_{blog_identity}.yml#/_v1_blog_{blog_identity}_put
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -481,7 +475,7 @@ paths:
             - blog
       x-codeSamples:
         $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_blog_{blog_identity}.yml#/_v1_blog_{blog_identity}_delete
+          ./example__v1_blog_{blog_identity}.yml#/_v1_blog_{blog_identity}_delete
       parameters:
         - name: PN-Client-Id
           in: header
@@ -529,8 +523,7 @@ paths:
         - OauthClient:
             - blog
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_blog_{blog_identity}.yml#/_v1_blog_{blog_identity}_get
+        $ref: ./example__v1_blog_{blog_identity}.yml#/_v1_blog_{blog_identity}_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -559,8 +552,7 @@ paths:
                   message:
                     type: string
                   data:
-                    $ref: >-
-                      https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/blog
+                    $ref: ./schemas.yml#/schemas/blog
               example:
                 error: false
                 message: OK
@@ -609,8 +601,7 @@ paths:
         - OauthClient:
             - blog
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_blog_tags_{tag}.yml#/_v1_blog_tags_{tag}_get
+        $ref: ./example__v1_blog_tags_{tag}.yml#/_v1_blog_tags_{tag}_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -677,8 +668,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: >-
-                            https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/blog_pagination
+                          $ref: ./schemas.yml#/schemas/blog_pagination
               example:
                 error: false
                 message: OK
@@ -726,7 +716,7 @@ paths:
             - blog
       x-codeSamples:
         $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_blog_category_{category}.yml#/_v1_blog_category_{category}_get
+          ./example__v1_blog_category_{category}.yml#/_v1_blog_category_{category}_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -793,8 +783,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: >-
-                            https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/blog_pagination
+                          $ref: ./schemas.yml#/schemas/blog_pagination
               example:
                 error: false
                 message: OK
@@ -841,8 +830,7 @@ paths:
         - OauthClient:
             - blog
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_blog_category_list.yml#/_v1_blog_category_list_get
+        $ref: ./example__v1_blog_category_list.yml#/_v1_blog_category_list_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -893,7 +881,7 @@ paths:
             - comments
       x-codeSamples:
         $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_comments_{type}_{content_id}.yml#/_v1_comments_{type}_{content_id}_get
+          ./example__v1_comments_{type}_{content_id}.yml#/_v1_comments_{type}_{content_id}_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -967,8 +955,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: >-
-                            https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/comment_pagination
+                          $ref: ./schemas.yml#/schemas/comment_pagination
               example:
                 error: false
                 message: OK
@@ -1032,7 +1019,7 @@ paths:
             - comments
       x-codeSamples:
         $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_comments_{type}_{content_id}.yml#/_v1_comments_{type}_{content_id}_post
+          ./example__v1_comments_{type}_{content_id}.yml#/_v1_comments_{type}_{content_id}_post
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -1097,8 +1084,7 @@ paths:
                   message:
                     type: string
                   data:
-                    $ref: >-
-                      https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/comment_pagination
+                    $ref: ./schemas.yml#/schemas/comment_pagination
               example:
                 error: false
                 message: OK
@@ -1141,7 +1127,7 @@ paths:
             - comments
       x-codeSamples:
         $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_comments_{type}_{content_id}_{comment_id}.yml#/_v1_comments_{type}_{content_id}_{comment_id}_get
+          ./example__v1_comments_{type}_{content_id}_{comment_id}.yml#/_v1_comments_{type}_{content_id}_{comment_id}_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -1222,8 +1208,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: >-
-                            https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/comment_reply_pagination
+                          $ref: ./schemas.yml#/schemas/comment_reply_pagination
               example:
                 error: false
                 message: OK
@@ -1263,7 +1248,7 @@ paths:
             - comments
       x-codeSamples:
         $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_comments_{type}_{content_id}_{comment_id}.yml#/_v1_comments_{type}_{content_id}_{comment_id}_delete
+          ./example__v1_comments_{type}_{content_id}_{comment_id}.yml#/_v1_comments_{type}_{content_id}_{comment_id}_delete
       parameters:
         - name: PN-Client-Id
           in: header
@@ -1324,8 +1309,7 @@ paths:
         - OauthUser:
             - chord
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_chord_dashboard.yml#/_v1_chord_dashboard_get
+        $ref: ./example__v1_chord_dashboard.yml#/_v1_chord_dashboard_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -1383,8 +1367,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: >-
-                            https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/chord_pagination
+                          $ref: ./schemas.yml#/schemas/chord_pagination
               example:
                 error: false
                 message: OK
@@ -1430,8 +1413,7 @@ paths:
         - OauthClient:
             - chord
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_chord.yml#/_v1_chord_get
+        $ref: ./example__v1_chord.yml#/_v1_chord_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -1499,8 +1481,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: >-
-                            https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/chord_pagination
+                          $ref: ./schemas.yml#/schemas/chord_pagination
               example:
                 error: false
                 message: OK
@@ -1546,8 +1527,7 @@ paths:
         - OauthClient:
             - chord
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_chord_artist_{artist}.yml#/_v1_chord_artist_{artist}_get
+        $ref: ./example__v1_chord_artist_{artist}.yml#/_v1_chord_artist_{artist}_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -1612,8 +1592,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: >-
-                            https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/chord_pagination
+                          $ref: ./schemas.yml#/schemas/chord_pagination
               example:
                 error: false
                 message: OK
@@ -1659,8 +1638,7 @@ paths:
         - OauthClient:
             - chord
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_chord_artist_list.yml#/_v1_chord_artist_list_get
+        $ref: ./example__v1_chord_artist_list.yml#/_v1_chord_artist_list_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -1758,8 +1736,7 @@ paths:
         - OauthClient:
             - chord
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_chord_{slug}.yml#/_v1_chord_{slug}_get
+        $ref: ./example__v1_chord_{slug}.yml#/_v1_chord_{slug}_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -1788,8 +1765,7 @@ paths:
                   message:
                     type: string
                   data:
-                    $ref: >-
-                      https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/chord
+                    $ref: ./schemas.yml#/schemas/chord
               example:
                 error: false
                 message: OK
@@ -1832,8 +1808,7 @@ paths:
         - OauthUser:
             - files
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_files.yml#/_v1_files_get
+        $ref: ./example__v1_files.yml#/_v1_files_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -1900,8 +1875,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: >-
-                            https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/files_pagination
+                          $ref: ./schemas.yml#/schemas/files_pagination
               example:
                 error: false
                 message: OK
@@ -1937,8 +1911,7 @@ paths:
         - OauthUser:
             - files
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_files.yml#/_v1_files_post
+        $ref: ./example__v1_files.yml#/_v1_files_post
       requestBody:
         content:
           multipart/form-data:
@@ -2003,8 +1976,7 @@ paths:
         - OauthUser:
             - files
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_files_{file_id}.yml#/_v1_files_{file_id}_get
+        $ref: ./example__v1_files_{file_id}.yml#/_v1_files_{file_id}_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -2033,8 +2005,7 @@ paths:
                   message:
                     type: string
                   data:
-                    $ref: >-
-                      https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/files
+                    $ref: ./schemas.yml#/schemas/files
               example:
                 error: false
                 message: OK
@@ -2072,8 +2043,7 @@ paths:
         - OauthUser:
             - files
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_files_{file_id}.yml#/_v1_files_{file_id}_put
+        $ref: ./example__v1_files_{file_id}.yml#/_v1_files_{file_id}_put
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -2142,8 +2112,7 @@ paths:
         - OauthUser:
             - files
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_files_{file_id}.yml#/_v1_files_{file_id}_delete
+        $ref: ./example__v1_files_{file_id}.yml#/_v1_files_{file_id}_delete
       parameters:
         - name: PN-Client-Id
           in: header
@@ -2192,8 +2161,7 @@ paths:
         - OauthClient:
             - geodata
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_geodata_epsg.yml#/_v1_geodata_epsg_get
+        $ref: ./example__v1_geodata_epsg.yml#/_v1_geodata_epsg_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -2258,8 +2226,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: >-
-                            https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/geodata_epsg_pagination
+                          $ref: ./schemas.yml#/schemas/geodata_epsg_pagination
               example:
                 error: false
                 message: OK
@@ -2291,7 +2258,7 @@ paths:
             - geodata
       x-codeSamples:
         $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_geodata_transform-coordinates.yml#/_v1_geodata_transform-coordinates_post
+          ./example__v1_geodata_transform-coordinates.yml#/_v1_geodata_transform-coordinates_post
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -2386,8 +2353,7 @@ paths:
         - OauthUser:
             - likes
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_like.yml#/_v1_like_get
+        $ref: ./example__v1_like.yml#/_v1_like_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -2422,12 +2388,9 @@ paths:
                               type: array
                               items:
                                 oneOf:
-                                  - $ref: >-
-                                      https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/chord_pagination
-                                  - $ref: >-
-                                      https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/blog_pagination
-                                  - $ref: >-
-                                      https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/twitter_pagination
+                                  - $ref: ./schemas.yml#/schemas/chord_pagination
+                                  - $ref: ./schemas.yml#/schemas/blog_pagination
+                                  - $ref: ./schemas.yml#/schemas/twitter_pagination
               example:
                 error: false
                 message: OK
@@ -2502,8 +2465,7 @@ paths:
         - OauthUser:
             - likes
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_like_{type}.yml#/_v1_like_{type}_get
+        $ref: ./example__v1_like_{type}.yml#/_v1_like_{type}_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -2580,12 +2542,9 @@ paths:
                             type: array
                             items:
                               oneOf:
-                                - $ref: >-
-                                    https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/chord_pagination
-                                - $ref: >-
-                                    https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/blog_pagination
-                                - $ref: >-
-                                    https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/twitter_pagination
+                                - $ref: ./schemas.yml#/schemas/chord_pagination
+                                - $ref: ./schemas.yml#/schemas/blog_pagination
+                                - $ref: ./schemas.yml#/schemas/twitter_pagination
               example:
                 error: false
                 message: OK
@@ -2620,7 +2579,7 @@ paths:
             - likes
       x-codeSamples:
         $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_like_{type}_{like_id}.yml#/_v1_like_{type}_{like_id}_delete
+          ./example__v1_like_{type}_{like_id}.yml#/_v1_like_{type}_{like_id}_delete
       parameters:
         - name: PN-Client-Id
           in: header
@@ -2678,8 +2637,7 @@ paths:
         - OauthUser:
             - messages
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_messages_room.yml#/_v1_messages_room_get
+        $ref: ./example__v1_messages_room.yml#/_v1_messages_room_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -2746,8 +2704,7 @@ paths:
                             read:
                               type: boolean
                             user:
-                              $ref: >-
-                                https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/user_pagination
+                              $ref: ./schemas.yml#/schemas/user_pagination
               example:
                 error: false
                 message: OK
@@ -2779,8 +2736,7 @@ paths:
         - OauthUser:
             - messages
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_messages_room.yml#/_v1_messages_room_post
+        $ref: ./example__v1_messages_room.yml#/_v1_messages_room_post
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -2823,8 +2779,7 @@ paths:
                       read:
                         type: boolean
                       user:
-                        $ref: >-
-                          https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/user_pagination
+                        $ref: ./schemas.yml#/schemas/user_pagination
               example:
                 error: false
                 message: OK
@@ -2852,8 +2807,7 @@ paths:
         - OauthUser:
             - messages
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_messages_{room_id}.yml#/_v1_messages_{room_id}_get
+        $ref: ./example__v1_messages_{room_id}.yml#/_v1_messages_{room_id}_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -2918,8 +2872,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: >-
-                            https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/messages_pagination
+                          $ref: ./schemas.yml#/schemas/messages_pagination
               example:
                 error: false
                 message: OK
@@ -2953,8 +2906,7 @@ paths:
         - OauthUser:
             - messages
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_messages_{room_id}.yml#/_v1_messages_{room_id}_post
+        $ref: ./example__v1_messages_{room_id}.yml#/_v1_messages_{room_id}_post
       requestBody:
         content:
           multipart/form-data:
@@ -2995,8 +2947,7 @@ paths:
                   message:
                     type: string
                   data:
-                    $ref: >-
-                      https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/messages_pagination
+                    $ref: ./schemas.yml#/schemas/messages_pagination
               example:
                 error: false
                 message: OK
@@ -3027,7 +2978,7 @@ paths:
             - messages
       x-codeSamples:
         $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_messages_{room_id}_{message_id}.yml#/_v1_messages_{room_id}_{message_id}_delete
+          ./example__v1_messages_{room_id}_{message_id}.yml#/_v1_messages_{room_id}_{message_id}_delete
       parameters:
         - name: PN-Client-Id
           in: header
@@ -3086,8 +3037,7 @@ paths:
         - OauthUser:
             - quiz
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_quiz.yml#/_v1_quiz_get
+        $ref: ./example__v1_quiz.yml#/_v1_quiz_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -3145,8 +3095,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: >-
-                            https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/quiz_pagination
+                          $ref: ./schemas.yml#/schemas/quiz_pagination
               example:
                 error: false
                 message: OK
@@ -3179,8 +3128,7 @@ paths:
         - OauthClient:
             - quiz
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_quiz_{quiz_id}.yml#/_v1_quiz_{quiz_id}_get
+        $ref: ./example__v1_quiz_{quiz_id}.yml#/_v1_quiz_{quiz_id}_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -3209,8 +3157,7 @@ paths:
                   message:
                     type: string
                   data:
-                    $ref: >-
-                      https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/quiz
+                    $ref: ./schemas.yml#/schemas/quiz
               example:
                 error: false
                 message: OK
@@ -3247,8 +3194,7 @@ paths:
         - color: red
           label: 'OAuth: User'
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_search.yml#/_v1_search_get
+        $ref: ./example__v1_search.yml#/_v1_search_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -3290,14 +3236,10 @@ paths:
                               type: array
                               items:
                                 oneOf:
-                                  - $ref: >-
-                                      https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/chord_pagination
-                                  - $ref: >-
-                                      https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/blog_pagination
-                                  - $ref: >-
-                                      https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/twitter_pagination
-                                  - $ref: >-
-                                      https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/user_pagination
+                                  - $ref: ./schemas.yml#/schemas/chord_pagination
+                                  - $ref: ./schemas.yml#/schemas/blog_pagination
+                                  - $ref: ./schemas.yml#/schemas/twitter_pagination
+                                  - $ref: ./schemas.yml#/schemas/user_pagination
               example:
                 error: false
                 message: OK
@@ -3365,8 +3307,7 @@ paths:
         - color: red
           label: 'OAuth: User'
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_search_{type}.yml#/_v1_search_{type}_get
+        $ref: ./example__v1_search_{type}.yml#/_v1_search_{type}_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -3451,14 +3392,10 @@ paths:
                             type: array
                             items:
                               oneOf:
-                                - $ref: >-
-                                    https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/chord_pagination
-                                - $ref: >-
-                                    https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/blog_pagination
-                                - $ref: >-
-                                    https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/twitter_pagination
-                                - $ref: >-
-                                    https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/user_pagination
+                                - $ref: ./schemas.yml#/schemas/chord_pagination
+                                - $ref: ./schemas.yml#/schemas/blog_pagination
+                                - $ref: ./schemas.yml#/schemas/twitter_pagination
+                                - $ref: ./schemas.yml#/schemas/user_pagination
               example:
                 error: false
                 message: OK
@@ -3506,8 +3443,7 @@ paths:
         - OauthClient:
             - toko
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_toko_{toko_id}_items.yml#/_v1_toko_{toko_id}_items_get
+        $ref: ./example__v1_toko_{toko_id}_items.yml#/_v1_toko_{toko_id}_items_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -3572,8 +3508,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: >-
-                            https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/toko_item_pagination
+                          $ref: ./schemas.yml#/schemas/toko_item_pagination
               example:
                 error: false
                 message: OK
@@ -3606,8 +3541,7 @@ paths:
         - OauthUser:
             - toko
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_toko_{toko_id}_items.yml#/_v1_toko_{toko_id}_items_post
+        $ref: ./example__v1_toko_{toko_id}_items.yml#/_v1_toko_{toko_id}_items_post
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -3715,7 +3649,7 @@ paths:
             - toko
       x-codeSamples:
         $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_toko_{toko_id}_items_{item_id}.yml#/_v1_toko_{toko_id}_items_{item_id}_put
+          ./example__v1_toko_{toko_id}_items_{item_id}.yml#/_v1_toko_{toko_id}_items_{item_id}_put
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -3822,7 +3756,7 @@ paths:
             - toko
       x-codeSamples:
         $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_toko_{toko_id}_items_{item_id}.yml#/_v1_toko_{toko_id}_items_{item_id}_delete
+          ./example__v1_toko_{toko_id}_items_{item_id}.yml#/_v1_toko_{toko_id}_items_{item_id}_delete
       parameters:
         - name: PN-Client-Id
           in: header
@@ -3875,7 +3809,7 @@ paths:
             - toko
       x-codeSamples:
         $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_toko_{toko_id}_transactions.yml#/_v1_toko_{toko_id}_transactions_get
+          ./example__v1_toko_{toko_id}_transactions.yml#/_v1_toko_{toko_id}_transactions_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -3974,8 +3908,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: >-
-                            https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/toko_transaction_pagination
+                          $ref: ./schemas.yml#/schemas/toko_transaction_pagination
               example:
                 error: false
                 message: OK
@@ -4018,7 +3951,7 @@ paths:
             - toko
       x-codeSamples:
         $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_toko_{toko_id}_transactions.yml#/_v1_toko_{toko_id}_transactions_post
+          ./example__v1_toko_{toko_id}_transactions.yml#/_v1_toko_{toko_id}_transactions_post
       requestBody:
         content:
           application/json:
@@ -4091,7 +4024,7 @@ paths:
             - toko
       x-codeSamples:
         $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_toko_{toko_id}_transactions_{transaction_id}.yml#/_v1_toko_{toko_id}_transactions_{transaction_id}_delete
+          ./example__v1_toko_{toko_id}_transactions_{transaction_id}.yml#/_v1_toko_{toko_id}_transactions_{transaction_id}_delete
       parameters:
         - name: PN-Client-Id
           in: header
@@ -4143,8 +4076,7 @@ paths:
         - OauthUser:
             - toko
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_toko_{toko_id}_users.yml#/_v1_toko_{toko_id}_users_post
+        $ref: ./example__v1_toko_{toko_id}_users.yml#/_v1_toko_{toko_id}_users_post
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -4210,7 +4142,7 @@ paths:
             - toko
       x-codeSamples:
         $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_toko_{toko_id}_users_{user_id}.yml#/_v1_toko_{toko_id}_users_{user_id}_put
+          ./example__v1_toko_{toko_id}_users_{user_id}.yml#/_v1_toko_{toko_id}_users_{user_id}_put
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -4275,7 +4207,7 @@ paths:
             - toko
       x-codeSamples:
         $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_toko_{toko_id}_users_{user_id}.yml#/_v1_toko_{toko_id}_users_{user_id}_delete
+          ./example__v1_toko_{toko_id}_users_{user_id}.yml#/_v1_toko_{toko_id}_users_{user_id}_delete
       parameters:
         - name: PN-Client-Id
           in: header
@@ -4327,8 +4259,7 @@ paths:
         - OauthUser:
             - toko
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_toko.yml#/_v1_toko_get
+        $ref: ./example__v1_toko.yml#/_v1_toko_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -4386,8 +4317,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: >-
-                            https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/toko_pagination
+                          $ref: ./schemas.yml#/schemas/toko_pagination
               example:
                 error: false
                 message: OK
@@ -4420,8 +4350,7 @@ paths:
         - OauthUser:
             - toko
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_toko.yml#/_v1_toko_post
+        $ref: ./example__v1_toko.yml#/_v1_toko_post
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -4507,8 +4436,7 @@ paths:
         - OauthUser:
             - toko
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_toko_{toko_slug}.yml#/_v1_toko_{toko_slug}_get
+        $ref: ./example__v1_toko_{toko_slug}.yml#/_v1_toko_{toko_slug}_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -4537,8 +4465,7 @@ paths:
                   message:
                     type: string
                   data:
-                    $ref: >-
-                      https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/toko
+                    $ref: ./schemas.yml#/schemas/toko
               example:
                 error: false
                 message: OK
@@ -4571,8 +4498,7 @@ paths:
         - OauthUser:
             - toko
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_toko_{toko_slug}.yml#/_v1_toko_{toko_slug}_put
+        $ref: ./example__v1_toko_{toko_slug}.yml#/_v1_toko_{toko_slug}_put
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -4660,8 +4586,7 @@ paths:
         - OauthUser:
             - toko
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_toko_{toko_slug}.yml#/_v1_toko_{toko_slug}_delete
+        $ref: ./example__v1_toko_{toko_slug}.yml#/_v1_toko_{toko_slug}_delete
       parameters:
         - name: PN-Client-Id
           in: header
@@ -4704,7 +4629,7 @@ paths:
           label: 'OAuth: User'
       x-codeSamples:
         $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_tools_downloader_twitter.yml#/_v1_tools_downloader_twitter_post
+          ./example__v1_tools_downloader_twitter.yml#/_v1_tools_downloader_twitter_post
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -4784,7 +4709,7 @@ paths:
           label: 'OAuth: User'
       x-codeSamples:
         $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_tools_downloader_soundcloud.yml#/_v1_tools_downloader_soundcloud_post
+          ./example__v1_tools_downloader_soundcloud.yml#/_v1_tools_downloader_soundcloud_post
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -4865,7 +4790,7 @@ paths:
           label: 'OAuth: User'
       x-codeSamples:
         $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_tools_qr-code-generator.yml#/_v1_tools_qr-code-generator_post
+          ./example__v1_tools_qr-code-generator.yml#/_v1_tools_qr-code-generator_post
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -5033,8 +4958,7 @@ paths:
         - color: red
           label: 'OAuth: User'
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_tools_parse-html.yml#/_v1_tools_parse-html_post
+        $ref: ./example__v1_tools_parse-html.yml#/_v1_tools_parse-html_post
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -5084,8 +5008,7 @@ paths:
         - color: red
           label: 'OAuth: User'
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_tools_nsfw.yml#/_v1_tools_nsfw_post
+        $ref: ./example__v1_tools_nsfw.yml#/_v1_tools_nsfw_post
       requestBody:
         content:
           multipart/form-data:
@@ -5162,8 +5085,7 @@ paths:
         - OauthClient:
             - twibbon
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_twibbon_dashboard.yml#/_v1_twibbon_dashboard_get
+        $ref: ./example__v1_twibbon_dashboard.yml#/_v1_twibbon_dashboard_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -5221,8 +5143,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: >-
-                            https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/twibbon_pagination
+                          $ref: ./schemas.yml#/schemas/twibbon_pagination
               example:
                 error: false
                 message: OK
@@ -5264,8 +5185,7 @@ paths:
         - OauthClient:
             - twibbon
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_twibbon.yml#/_v1_twibbon_get
+        $ref: ./example__v1_twibbon.yml#/_v1_twibbon_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -5323,8 +5243,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: >-
-                            https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/twibbon_pagination
+                          $ref: ./schemas.yml#/schemas/twibbon_pagination
               example:
                 error: false
                 message: OK
@@ -5366,8 +5285,7 @@ paths:
         - OauthClient:
             - twibbon
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_twibbon_{slug}.yml#/_v1_twibbon_{slug}_get
+        $ref: ./example__v1_twibbon_{slug}.yml#/_v1_twibbon_{slug}_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -5396,8 +5314,7 @@ paths:
                   message:
                     type: string
                   data:
-                    $ref: >-
-                      https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/twibbon
+                    $ref: ./schemas.yml#/schemas/twibbon
               example:
                 error: false
                 message: OK
@@ -5430,8 +5347,7 @@ paths:
         - OauthUser:
             - twibbon
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_twibbon_{slug}.yml#/_v1_twibbon_{slug}_put
+        $ref: ./example__v1_twibbon_{slug}.yml#/_v1_twibbon_{slug}_put
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -5497,8 +5413,7 @@ paths:
         - OauthUser:
             - twibbon
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_twibbon_{slug}.yml#/_v1_twibbon_{slug}_delete
+        $ref: ./example__v1_twibbon_{slug}.yml#/_v1_twibbon_{slug}_delete
       parameters:
         - name: PN-Client-Id
           in: header
@@ -5547,8 +5462,7 @@ paths:
         - OauthClient:
             - thread
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_twitter_thread.yml#/_v1_twitter_thread_get
+        $ref: ./example__v1_twitter_thread.yml#/_v1_twitter_thread_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -5616,8 +5530,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: >-
-                            https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/twitter_pagination
+                          $ref: ./schemas.yml#/schemas/twitter_pagination
               example:
                 error: false
                 message: OK
@@ -5651,8 +5564,7 @@ paths:
         - OauthClient:
             - thread
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_twitter_thread.yml#/_v1_twitter_thread_post
+        $ref: ./example__v1_twitter_thread.yml#/_v1_twitter_thread_post
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -5698,8 +5610,7 @@ paths:
                       title:
                         type: string
                       created:
-                        $ref: >-
-                          https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/idate
+                        $ref: ./schemas.yml#/schemas/idate
               example:
                 error: false
                 message: OK
@@ -5730,7 +5641,7 @@ paths:
             - thread
       x-codeSamples:
         $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_twitter_thread_{tweet_id}.yml#/_v1_twitter_thread_{tweet_id}_get
+          ./example__v1_twitter_thread_{tweet_id}.yml#/_v1_twitter_thread_{tweet_id}_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -5759,8 +5670,7 @@ paths:
                   message:
                     type: string
                   data:
-                    $ref: >-
-                      https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/twitter
+                    $ref: ./schemas.yml#/schemas/twitter
               example:
                 error: false
                 message: OK
@@ -5813,7 +5723,7 @@ paths:
             - thread
       x-codeSamples:
         $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_twitter_thread_{tweet_id}.yml#/_v1_twitter_thread_{tweet_id}_post
+          ./example__v1_twitter_thread_{tweet_id}.yml#/_v1_twitter_thread_{tweet_id}_post
       requestBody:
         content: {}
       parameters:
@@ -5864,8 +5774,7 @@ paths:
         - OauthClient:
             - url-shortener
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_url-shortener.yml#/_v1_url-shortener_post
+        $ref: ./example__v1_url-shortener.yml#/_v1_url-shortener_post
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -5899,8 +5808,7 @@ paths:
                   message:
                     type: string
                   data:
-                    $ref: >-
-                      https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/url_shortener_pagination
+                    $ref: ./schemas.yml#/schemas/url_shortener_pagination
               example:
                 error: false
                 message: OK
@@ -5925,8 +5833,7 @@ paths:
         - OauthUser:
             - url-shortener
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_url-shortener.yml#/_v1_url-shortener_get
+        $ref: ./example__v1_url-shortener.yml#/_v1_url-shortener_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -5993,8 +5900,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: >-
-                            https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/url_shortener_pagination
+                          $ref: ./schemas.yml#/schemas/url_shortener_pagination
               example:
                 error: false
                 message: OK
@@ -6025,8 +5931,7 @@ paths:
         - OauthUser:
             - url-shortener
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_url-shortener_{id}.yml#/_v1_url-shortener_{id}_delete
+        $ref: ./example__v1_url-shortener_{id}.yml#/_v1_url-shortener_{id}_delete
       parameters:
         - name: PN-Client-Id
           in: header
@@ -6077,8 +5982,7 @@ paths:
         - OauthUser:
             - email
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_user.yml#/_v1_user_get
+        $ref: ./example__v1_user.yml#/_v1_user_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -6100,8 +6004,7 @@ paths:
                   message:
                     type: string
                   data:
-                    $ref: >-
-                      https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/basic_profile
+                    $ref: ./schemas.yml#/schemas/basic_profile
               example:
                 error: false
                 message: OK
@@ -6129,8 +6032,7 @@ paths:
         - OauthClient:
             - user
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_user_{username}.yml#/_v1_user_{username}_get
+        $ref: ./example__v1_user_{username}.yml#/_v1_user_{username}_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -6159,8 +6061,7 @@ paths:
                   message:
                     type: string
                   data:
-                    $ref: >-
-                      https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/user
+                    $ref: ./schemas.yml#/schemas/user
               example:
                 error: false
                 message: OK
@@ -6194,8 +6095,7 @@ paths:
         - OauthUser:
             - user
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_user_{username}.yml#/_v1_user_{username}_post
+        $ref: ./example__v1_user_{username}.yml#/_v1_user_{username}_post
       requestBody:
         content:
           multipart/form-data:
@@ -6261,8 +6161,7 @@ paths:
         - OauthUser:
             - user
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_user_{username}.yml#/_v1_user_{username}_delete
+        $ref: ./example__v1_user_{username}.yml#/_v1_user_{username}_delete
       parameters:
         - name: PN-Client-Id
           in: header
@@ -6310,8 +6209,7 @@ paths:
         - OauthUser:
             - user
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_user_{username}.yml#/_v1_user_{username}_put
+        $ref: ./example__v1_user_{username}.yml#/_v1_user_{username}_put
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -6396,7 +6294,7 @@ paths:
             - user
       x-codeSamples:
         $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_user_{username}_followers.yml#/_v1_user_{username}_followers_get
+          ./example__v1_user_{username}_followers.yml#/_v1_user_{username}_followers_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -6461,8 +6359,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: >-
-                            https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/user_room_pagination
+                          $ref: ./schemas.yml#/schemas/user_room_pagination
               example:
                 error: false
                 message: OK
@@ -6492,7 +6389,7 @@ paths:
             - user
       x-codeSamples:
         $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_user_{username}_followers_pending.yml#/_v1_user_{username}_followers_pending_get
+          ./example__v1_user_{username}_followers_pending.yml#/_v1_user_{username}_followers_pending_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -6606,7 +6503,7 @@ paths:
             - user
       x-codeSamples:
         $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_user_{username}_followers_pending_{token}.yml#/_v1_user_{username}_followers_pending_{token}_post
+          ./example__v1_user_{username}_followers_pending_{token}.yml#/_v1_user_{username}_followers_pending_{token}_post
       requestBody:
         content: {}
       parameters:
@@ -6667,7 +6564,7 @@ paths:
             - user
       x-codeSamples:
         $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_user_{username}_followers_pending_{token}.yml#/_v1_user_{username}_followers_pending_{token}_delete
+          ./example__v1_user_{username}_followers_pending_{token}.yml#/_v1_user_{username}_followers_pending_{token}_delete
       parameters:
         - name: PN-Client-Id
           in: header
@@ -6731,7 +6628,7 @@ paths:
             - user
       x-codeSamples:
         $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_user_{username}_following.yml#/_v1_user_{username}_following_get
+          ./example__v1_user_{username}_following.yml#/_v1_user_{username}_following_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -6796,8 +6693,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: >-
-                            https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/user_room_pagination
+                          $ref: ./schemas.yml#/schemas/user_room_pagination
               example:
                 error: false
                 message: OK
@@ -6839,7 +6735,7 @@ paths:
             - user
       x-codeSamples:
         $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_user_{username}_following_{target_username}.yml#/_v1_user_{username}_following_{target_username}_post
+          ./example__v1_user_{username}_following_{target_username}.yml#/_v1_user_{username}_following_{target_username}_post
       requestBody:
         content: {}
       parameters:
@@ -6914,7 +6810,7 @@ paths:
             - user
       x-codeSamples:
         $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_user_{username}_following_{target_username}.yml#/_v1_user_{username}_following_{target_username}_delete
+          ./example__v1_user_{username}_following_{target_username}.yml#/_v1_user_{username}_following_{target_username}_delete
       parameters:
         - name: PN-Client-Id
           in: header
@@ -6989,8 +6885,7 @@ paths:
             - user
             - files
       x-codeSamples:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/example__v1_user_{username}_media.yml#/_v1_user_{username}_media_get
+        $ref: ./example__v1_user_{username}_media.yml#/_v1_user_{username}_media_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -7055,8 +6950,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: >-
-                            https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/files_pagination
+                          $ref: ./schemas.yml#/schemas/files_pagination
               example:
                 error: false
                 message: OK

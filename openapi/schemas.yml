@@ -45,8 +45,7 @@ schemas:
         description: Picture URL of user
   basic_profile:
     allOf:
-      - $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/user_pagination
+      - $ref: '#/schemas/user_pagination'
       - type: object
         properties:
           email:
@@ -55,8 +54,7 @@ schemas:
               Email address of user, if your access token has `email` scope.
   user_toko:
     allOf:
-      - $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/user_pagination
+      - $ref: '#/schemas/user_pagination'
       - type: object
         properties:
           admin:
@@ -67,8 +65,7 @@ schemas:
             description: Owner status of this user for this toko
   user:
     allOf:
-      - $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/user_pagination
+      - $ref: '#/schemas/user_pagination'
       - type: object
         properties:
           about:
@@ -111,8 +108,7 @@ schemas:
             description: The total number of media of this user.
   user_room_pagination:
     allOf:
-      - $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/user_pagination
+      - $ref: '#/schemas/user_pagination'
       - type: object
         properties:
           verify:
@@ -134,11 +130,9 @@ schemas:
         type: string
         description: Title of song
       created:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/idate
+        $ref: '#/schemas/idate'
       seen:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/iseen
+        $ref: '#/schemas/iseen'
       slug:
         type: string
         description: Slugify format of chord
@@ -146,17 +140,14 @@ schemas:
         type: string
         description: Link to Portalnesia URL
       user:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/user_pagination
+        $ref: '#/schemas/user_pagination'
   chord:
     allOf:
-      - $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/chord_pagination
+      - $ref: '#/schemas/chord_pagination'
       - type: object
         properties:
           last_modified:
-            $ref: >-
-              https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/ilastmodified
+            $ref: '#/schemas/ilastmodified'
           publish:
             type: boolean
             description: Publish status of chord
@@ -176,8 +167,7 @@ schemas:
         type: string
         description: Title of blog
       created:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/idate
+        $ref: '#/schemas/idate'
       image:
         type: string
         nullable: true
@@ -189,8 +179,7 @@ schemas:
         type: string
         description: Slugify format og blog
       seen:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/iseen
+        $ref: '#/schemas/iseen'
       category:
         type: string
         description: Category of blog
@@ -200,17 +189,14 @@ schemas:
         items:
           type: string
       user:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/user_pagination
+        $ref: '#/schemas/user_pagination'
   blog:
     allOf:
-      - $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/blog_pagination
+      - $ref: '#/schemas/blog_pagination'
       - type: object
         properties:
           last_modified:
-            $ref: >-
-              https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/ilastmodified
+            $ref: '#/schemas/ilastmodified'
           format:
             type: string
             description: Format of blog
@@ -239,12 +225,10 @@ schemas:
         type: string
         description: Twitter username of the thread owner
       created:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/idate
+        $ref: '#/schemas/idate'
   twitter_pagination:
     allOf:
-      - $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/base_twitter_thread
+      - $ref: '#/schemas/base_twitter_thread'
       - type: object
         properties:
           title:
@@ -252,16 +236,14 @@ schemas:
             description: Thread title
   twitter:
     allOf:
-      - $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/base_twitter_thread
+      - $ref: '#/schemas/base_twitter_thread'
       - type: object
         properties:
           tweet_id:
             type: integer
             description: Portalnesia internal ID of thread.
           seen:
-            $ref: >-
-              https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/iseen
+            $ref: '#/schemas/iseen'
           original_thread:
             type: string
             description: Twitter url to original thread
@@ -335,15 +317,12 @@ schemas:
         type: boolean
         description: Publish status of twibbon
       created:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/idate
+        $ref: '#/schemas/idate'
       user:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/user_pagination
+        $ref: '#/schemas/user_pagination'
   twibbon:
     allOf:
-      - $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/twibbon_pagination
+      - $ref: '#/schemas/twibbon_pagination'
       - type: object
         properties:
           description:
@@ -398,8 +377,7 @@ schemas:
         type: integer
         description: Time of the last messagea in this chat room in unix format
       user:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/user_room_pagination
+        $ref: '#/schemas/user_room_pagination'
   comment_content:
     type: object
     properties:
@@ -434,12 +412,10 @@ schemas:
         type: string
         description: Comment text
       content:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/comment_content
+        $ref: '#/schemas/comment_content'
       user:
         oneOf:
-          - $ref: >-
-              https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/user_pagination
+          - $ref: '#/schemas/user_pagination'
           - type: object
             properties:
               name:
@@ -447,8 +423,7 @@ schemas:
                 description: Commenting name
   comment_pagination:
     allOf:
-      - $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/comment_reply_pagination
+      - $ref: '#/schemas/comment_reply_pagination'
       - type: object
         properties:
           reply:
@@ -464,8 +439,7 @@ schemas:
               data:
                 type: array
                 items:
-                  $ref: >-
-                    https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/comment_reply_pagination
+                  $ref: '#/schemas/comment_reply_pagination'
   base_files:
     type: object
     properties:
@@ -476,8 +450,7 @@ schemas:
         type: string
         description: Title of files
       created:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/idate
+        $ref: '#/schemas/idate'
       private:
         type: boolean
         description: Private status of files
@@ -496,8 +469,7 @@ schemas:
         nullable: true
   files_pagination:
     allOf:
-      - $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/base_files
+      - $ref: '#/schemas/base_files'
       - type: object
         properties:
           type:
@@ -515,8 +487,7 @@ schemas:
   files:
     oneOf:
       - allOf:
-          - $ref: >-
-              https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/base_files
+          - $ref: '#/schemas/base_files'
           - type: object
             properties:
               type:
@@ -527,11 +498,9 @@ schemas:
                   - audio
                   - youtube
               seen:
-                $ref: >-
-                  https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/iseen
+                $ref: '#/schemas/iseen'
               user:
-                $ref: >-
-                  https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/user_pagination
+                $ref: '#/schemas/user_pagination'
       - type: object
         properties:
           private:
@@ -553,8 +522,7 @@ schemas:
         type: string
         description: Long url of this url
       created:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/idate
+        $ref: '#/schemas/idate'
   geodata_epsg_pagination:
     type: object
     properties:
@@ -591,17 +559,14 @@ schemas:
         nullable: true
   toko_pagination:
     allOf:
-      - $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/base_toko_pagination
+      - $ref: '#/schemas/base_toko_pagination'
       - type: object
         properties:
           user:
-            $ref: >-
-              https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/user_pagination
+            $ref: '#/schemas/user_pagination'
   toko:
     allOf:
-      - $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/base_toko_pagination
+      - $ref: '#/schemas/base_toko_pagination'
       - type: object
         properties:
           description:
@@ -619,8 +584,7 @@ schemas:
           users:
             type: array
             items:
-              $ref: >-
-                https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/user_toko
+              $ref: '#/schemas/user_toko'
   toko_item_pagination:
     type: object
     properties:
@@ -703,8 +667,7 @@ schemas:
               type: integer
               description: Disscount of item
       user:
-        $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/user_pagination
+        $ref: '#/schemas/user_pagination'
   base_quiz:
     type: object
     properties:
@@ -722,8 +685,7 @@ schemas:
         description: Publish status of quiz
   quiz_pagination:
     allOf:
-      - $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/base_quiz
+      - $ref: '#/schemas/base_quiz'
       - type: object
         properties:
           total_response:
@@ -733,8 +695,7 @@ schemas:
               has not been published.
   quiz:
     allOf:
-      - $ref: >-
-          https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/base_quiz
+      - $ref: '#/schemas/base_quiz'
       - type: object
         properties:
           self_answer:
@@ -768,5 +729,4 @@ schemas:
                       All of the possible answer in quiz. Will only be shown if
                       you are the owner of this quiz.
           user:
-            $ref: >-
-              https://raw.githubusercontent.com/portalnesia/files/main/openapi/schemas.yml#/schemas/user_pagination
+            $ref: '#/schemas/user_pagination'
