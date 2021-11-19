@@ -54,7 +54,7 @@ paths:
         - OauthUser:
             - blog
       x-codeSamples:
-        $ref: ./example__v1_blog_dashboard.yml#/_v1_blog_dashboard_get
+        $ref: ./example_v1_blog_dashboard.yml#/v1_blog_dashboard_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -156,7 +156,7 @@ paths:
         - OauthUser:
             - blog
       x-codeSamples:
-        $ref: ./example__v1_blog.yml#/_v1_blog_post
+        $ref: ./example_v1_blog.yml#/v1_blog_post
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -255,7 +255,7 @@ paths:
         - OauthClient:
             - blog
       x-codeSamples:
-        $ref: ./example__v1_blog.yml#/_v1_blog_get
+        $ref: ./example_v1_blog.yml#/v1_blog_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -356,7 +356,7 @@ paths:
         - OauthUser:
             - blog
       x-codeSamples:
-        $ref: ./example__v1_blog_{blog_identity}.yml#/_v1_blog_{blog_identity}_put
+        $ref: ./example_v1_blog__blog_identity.yml#/v1_blog__blog_identity_put
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -474,8 +474,7 @@ paths:
         - OauthUser:
             - blog
       x-codeSamples:
-        $ref: >-
-          ./example__v1_blog_{blog_identity}.yml#/_v1_blog_{blog_identity}_delete
+        $ref: ./example_v1_blog__blog_identity.yml#/v1_blog__blog_identity_delete
       parameters:
         - name: PN-Client-Id
           in: header
@@ -523,7 +522,7 @@ paths:
         - OauthClient:
             - blog
       x-codeSamples:
-        $ref: ./example__v1_blog_{blog_identity}.yml#/_v1_blog_{blog_identity}_get
+        $ref: ./example_v1_blog__blog_identity.yml#/v1_blog__blog_identity_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -601,7 +600,7 @@ paths:
         - OauthClient:
             - blog
       x-codeSamples:
-        $ref: ./example__v1_blog_tags_{tag}.yml#/_v1_blog_tags_{tag}_get
+        $ref: ./example_v1_blog_tags__tag.yml#/v1_blog_tags__tag_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -716,7 +715,7 @@ paths:
             - blog
       x-codeSamples:
         $ref: >-
-          ./example__v1_blog_category_{category}.yml#/_v1_blog_category_{category}_get
+          ./example_v1_blog_category__category.yml#/v1_blog_category__category_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -830,7 +829,7 @@ paths:
         - OauthClient:
             - blog
       x-codeSamples:
-        $ref: ./example__v1_blog_category_list.yml#/_v1_blog_category_list_get
+        $ref: ./example_v1_blog_category_list.yml#/v1_blog_category_list_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -881,7 +880,7 @@ paths:
             - comments
       x-codeSamples:
         $ref: >-
-          ./example__v1_comments_{type}_{content_id}.yml#/_v1_comments_{type}_{content_id}_get
+          ./example_v1_comments__type___content_id.yml#/v1_comments__type___content_id_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -1019,7 +1018,7 @@ paths:
             - comments
       x-codeSamples:
         $ref: >-
-          ./example__v1_comments_{type}_{content_id}.yml#/_v1_comments_{type}_{content_id}_post
+          ./example_v1_comments__type___content_id.yml#/v1_comments__type___content_id_post
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -1127,7 +1126,7 @@ paths:
             - comments
       x-codeSamples:
         $ref: >-
-          ./example__v1_comments_{type}_{content_id}_{comment_id}.yml#/_v1_comments_{type}_{content_id}_{comment_id}_get
+          ./example_v1_comments__type___content_id___comment_id.yml#/v1_comments__type___content_id___comment_id_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -1248,7 +1247,7 @@ paths:
             - comments
       x-codeSamples:
         $ref: >-
-          ./example__v1_comments_{type}_{content_id}_{comment_id}.yml#/_v1_comments_{type}_{content_id}_{comment_id}_delete
+          ./example_v1_comments__type___content_id___comment_id.yml#/v1_comments__type___content_id___comment_id_delete
       parameters:
         - name: PN-Client-Id
           in: header
@@ -1309,7 +1308,7 @@ paths:
         - OauthUser:
             - chord
       x-codeSamples:
-        $ref: ./example__v1_chord_dashboard.yml#/_v1_chord_dashboard_get
+        $ref: ./example_v1_chord_dashboard.yml#/v1_chord_dashboard_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -1413,7 +1412,7 @@ paths:
         - OauthClient:
             - chord
       x-codeSamples:
-        $ref: ./example__v1_chord.yml#/_v1_chord_get
+        $ref: ./example_v1_chord.yml#/v1_chord_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -1527,7 +1526,7 @@ paths:
         - OauthClient:
             - chord
       x-codeSamples:
-        $ref: ./example__v1_chord_artist_{artist}.yml#/_v1_chord_artist_{artist}_get
+        $ref: ./example_v1_chord_artist__artist.yml#/v1_chord_artist__artist_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -1638,7 +1637,7 @@ paths:
         - OauthClient:
             - chord
       x-codeSamples:
-        $ref: ./example__v1_chord_artist_list.yml#/_v1_chord_artist_list_get
+        $ref: ./example_v1_chord_artist_list.yml#/v1_chord_artist_list_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -1736,7 +1735,7 @@ paths:
         - OauthClient:
             - chord
       x-codeSamples:
-        $ref: ./example__v1_chord_{slug}.yml#/_v1_chord_{slug}_get
+        $ref: ./example_v1_chord__slug.yml#/v1_chord__slug_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -1808,7 +1807,7 @@ paths:
         - OauthUser:
             - files
       x-codeSamples:
-        $ref: ./example__v1_files.yml#/_v1_files_get
+        $ref: ./example_v1_files.yml#/v1_files_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -1911,7 +1910,7 @@ paths:
         - OauthUser:
             - files
       x-codeSamples:
-        $ref: ./example__v1_files.yml#/_v1_files_post
+        $ref: ./example_v1_files.yml#/v1_files_post
       requestBody:
         content:
           multipart/form-data:
@@ -1976,7 +1975,7 @@ paths:
         - OauthUser:
             - files
       x-codeSamples:
-        $ref: ./example__v1_files_{file_id}.yml#/_v1_files_{file_id}_get
+        $ref: ./example_v1_files__file_id.yml#/v1_files__file_id_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -2043,7 +2042,7 @@ paths:
         - OauthUser:
             - files
       x-codeSamples:
-        $ref: ./example__v1_files_{file_id}.yml#/_v1_files_{file_id}_put
+        $ref: ./example_v1_files__file_id.yml#/v1_files__file_id_put
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -2112,7 +2111,7 @@ paths:
         - OauthUser:
             - files
       x-codeSamples:
-        $ref: ./example__v1_files_{file_id}.yml#/_v1_files_{file_id}_delete
+        $ref: ./example_v1_files__file_id.yml#/v1_files__file_id_delete
       parameters:
         - name: PN-Client-Id
           in: header
@@ -2161,7 +2160,7 @@ paths:
         - OauthClient:
             - geodata
       x-codeSamples:
-        $ref: ./example__v1_geodata_epsg.yml#/_v1_geodata_epsg_get
+        $ref: ./example_v1_geodata_epsg.yml#/v1_geodata_epsg_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -2258,7 +2257,7 @@ paths:
             - geodata
       x-codeSamples:
         $ref: >-
-          ./example__v1_geodata_transform-coordinates.yml#/_v1_geodata_transform-coordinates_post
+          ./example_v1_geodata_transform_coordinates.yml#/v1_geodata_transform_coordinates_post
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -2353,7 +2352,7 @@ paths:
         - OauthUser:
             - likes
       x-codeSamples:
-        $ref: ./example__v1_like.yml#/_v1_like_get
+        $ref: ./example_v1_like.yml#/v1_like_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -2465,7 +2464,7 @@ paths:
         - OauthUser:
             - likes
       x-codeSamples:
-        $ref: ./example__v1_like_{type}.yml#/_v1_like_{type}_get
+        $ref: ./example_v1_like__type.yml#/v1_like__type_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -2578,8 +2577,7 @@ paths:
         - OauthUser:
             - likes
       x-codeSamples:
-        $ref: >-
-          ./example__v1_like_{type}_{like_id}.yml#/_v1_like_{type}_{like_id}_delete
+        $ref: ./example_v1_like__type___like_id.yml#/v1_like__type___like_id_delete
       parameters:
         - name: PN-Client-Id
           in: header
@@ -2637,7 +2635,7 @@ paths:
         - OauthUser:
             - messages
       x-codeSamples:
-        $ref: ./example__v1_messages_room.yml#/_v1_messages_room_get
+        $ref: ./example_v1_messages_room.yml#/v1_messages_room_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -2736,7 +2734,7 @@ paths:
         - OauthUser:
             - messages
       x-codeSamples:
-        $ref: ./example__v1_messages_room.yml#/_v1_messages_room_post
+        $ref: ./example_v1_messages_room.yml#/v1_messages_room_post
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -2807,7 +2805,7 @@ paths:
         - OauthUser:
             - messages
       x-codeSamples:
-        $ref: ./example__v1_messages_{room_id}.yml#/_v1_messages_{room_id}_get
+        $ref: ./example_v1_messages__room_id.yml#/v1_messages__room_id_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -2906,7 +2904,7 @@ paths:
         - OauthUser:
             - messages
       x-codeSamples:
-        $ref: ./example__v1_messages_{room_id}.yml#/_v1_messages_{room_id}_post
+        $ref: ./example_v1_messages__room_id.yml#/v1_messages__room_id_post
       requestBody:
         content:
           multipart/form-data:
@@ -2978,7 +2976,7 @@ paths:
             - messages
       x-codeSamples:
         $ref: >-
-          ./example__v1_messages_{room_id}_{message_id}.yml#/_v1_messages_{room_id}_{message_id}_delete
+          ./example_v1_messages__room_id___message_id.yml#/v1_messages__room_id___message_id_delete
       parameters:
         - name: PN-Client-Id
           in: header
@@ -3037,7 +3035,7 @@ paths:
         - OauthUser:
             - quiz
       x-codeSamples:
-        $ref: ./example__v1_quiz.yml#/_v1_quiz_get
+        $ref: ./example_v1_quiz.yml#/v1_quiz_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -3128,7 +3126,7 @@ paths:
         - OauthClient:
             - quiz
       x-codeSamples:
-        $ref: ./example__v1_quiz_{quiz_id}.yml#/_v1_quiz_{quiz_id}_get
+        $ref: ./example_v1_quiz__quiz_id.yml#/v1_quiz__quiz_id_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -3194,7 +3192,7 @@ paths:
         - color: red
           label: 'OAuth: User'
       x-codeSamples:
-        $ref: ./example__v1_search.yml#/_v1_search_get
+        $ref: ./example_v1_search.yml#/v1_search_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -3307,7 +3305,7 @@ paths:
         - color: red
           label: 'OAuth: User'
       x-codeSamples:
-        $ref: ./example__v1_search_{type}.yml#/_v1_search_{type}_get
+        $ref: ./example_v1_search__type.yml#/v1_search__type_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -3443,7 +3441,7 @@ paths:
         - OauthClient:
             - toko
       x-codeSamples:
-        $ref: ./example__v1_toko_{toko_id}_items.yml#/_v1_toko_{toko_id}_items_get
+        $ref: ./example_v1_toko__toko_id__items.yml#/v1_toko__toko_id__items_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -3541,7 +3539,7 @@ paths:
         - OauthUser:
             - toko
       x-codeSamples:
-        $ref: ./example__v1_toko_{toko_id}_items.yml#/_v1_toko_{toko_id}_items_post
+        $ref: ./example_v1_toko__toko_id__items.yml#/v1_toko__toko_id__items_post
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -3649,7 +3647,7 @@ paths:
             - toko
       x-codeSamples:
         $ref: >-
-          ./example__v1_toko_{toko_id}_items_{item_id}.yml#/_v1_toko_{toko_id}_items_{item_id}_put
+          ./example_v1_toko__toko_id__items__item_id.yml#/v1_toko__toko_id__items__item_id_put
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -3756,7 +3754,7 @@ paths:
             - toko
       x-codeSamples:
         $ref: >-
-          ./example__v1_toko_{toko_id}_items_{item_id}.yml#/_v1_toko_{toko_id}_items_{item_id}_delete
+          ./example_v1_toko__toko_id__items__item_id.yml#/v1_toko__toko_id__items__item_id_delete
       parameters:
         - name: PN-Client-Id
           in: header
@@ -3809,7 +3807,7 @@ paths:
             - toko
       x-codeSamples:
         $ref: >-
-          ./example__v1_toko_{toko_id}_transactions.yml#/_v1_toko_{toko_id}_transactions_get
+          ./example_v1_toko__toko_id__transactions.yml#/v1_toko__toko_id__transactions_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -3951,7 +3949,7 @@ paths:
             - toko
       x-codeSamples:
         $ref: >-
-          ./example__v1_toko_{toko_id}_transactions.yml#/_v1_toko_{toko_id}_transactions_post
+          ./example_v1_toko__toko_id__transactions.yml#/v1_toko__toko_id__transactions_post
       requestBody:
         content:
           application/json:
@@ -4024,7 +4022,7 @@ paths:
             - toko
       x-codeSamples:
         $ref: >-
-          ./example__v1_toko_{toko_id}_transactions_{transaction_id}.yml#/_v1_toko_{toko_id}_transactions_{transaction_id}_delete
+          ./example_v1_toko__toko_id__transactions__transaction_id.yml#/v1_toko__toko_id__transactions__transaction_id_delete
       parameters:
         - name: PN-Client-Id
           in: header
@@ -4076,7 +4074,7 @@ paths:
         - OauthUser:
             - toko
       x-codeSamples:
-        $ref: ./example__v1_toko_{toko_id}_users.yml#/_v1_toko_{toko_id}_users_post
+        $ref: ./example_v1_toko__toko_id__users.yml#/v1_toko__toko_id__users_post
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -4142,7 +4140,7 @@ paths:
             - toko
       x-codeSamples:
         $ref: >-
-          ./example__v1_toko_{toko_id}_users_{user_id}.yml#/_v1_toko_{toko_id}_users_{user_id}_put
+          ./example_v1_toko__toko_id__users__user_id.yml#/v1_toko__toko_id__users__user_id_put
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -4207,7 +4205,7 @@ paths:
             - toko
       x-codeSamples:
         $ref: >-
-          ./example__v1_toko_{toko_id}_users_{user_id}.yml#/_v1_toko_{toko_id}_users_{user_id}_delete
+          ./example_v1_toko__toko_id__users__user_id.yml#/v1_toko__toko_id__users__user_id_delete
       parameters:
         - name: PN-Client-Id
           in: header
@@ -4259,7 +4257,7 @@ paths:
         - OauthUser:
             - toko
       x-codeSamples:
-        $ref: ./example__v1_toko.yml#/_v1_toko_get
+        $ref: ./example_v1_toko.yml#/v1_toko_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -4350,7 +4348,7 @@ paths:
         - OauthUser:
             - toko
       x-codeSamples:
-        $ref: ./example__v1_toko.yml#/_v1_toko_post
+        $ref: ./example_v1_toko.yml#/v1_toko_post
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -4436,7 +4434,7 @@ paths:
         - OauthUser:
             - toko
       x-codeSamples:
-        $ref: ./example__v1_toko_{toko_slug}.yml#/_v1_toko_{toko_slug}_get
+        $ref: ./example_v1_toko__toko_slug.yml#/v1_toko__toko_slug_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -4498,7 +4496,7 @@ paths:
         - OauthUser:
             - toko
       x-codeSamples:
-        $ref: ./example__v1_toko_{toko_slug}.yml#/_v1_toko_{toko_slug}_put
+        $ref: ./example_v1_toko__toko_slug.yml#/v1_toko__toko_slug_put
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -4586,7 +4584,7 @@ paths:
         - OauthUser:
             - toko
       x-codeSamples:
-        $ref: ./example__v1_toko_{toko_slug}.yml#/_v1_toko_{toko_slug}_delete
+        $ref: ./example_v1_toko__toko_slug.yml#/v1_toko__toko_slug_delete
       parameters:
         - name: PN-Client-Id
           in: header
@@ -4629,7 +4627,7 @@ paths:
           label: 'OAuth: User'
       x-codeSamples:
         $ref: >-
-          ./example__v1_tools_downloader_twitter.yml#/_v1_tools_downloader_twitter_post
+          ./example_v1_tools_downloader_twitter.yml#/v1_tools_downloader_twitter_post
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -4709,7 +4707,7 @@ paths:
           label: 'OAuth: User'
       x-codeSamples:
         $ref: >-
-          ./example__v1_tools_downloader_soundcloud.yml#/_v1_tools_downloader_soundcloud_post
+          ./example_v1_tools_downloader_soundcloud.yml#/v1_tools_downloader_soundcloud_post
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -4790,7 +4788,7 @@ paths:
           label: 'OAuth: User'
       x-codeSamples:
         $ref: >-
-          ./example__v1_tools_qr-code-generator.yml#/_v1_tools_qr-code-generator_post
+          ./example_v1_tools_qr_code_generator.yml#/v1_tools_qr_code_generator_post
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -4958,7 +4956,7 @@ paths:
         - color: red
           label: 'OAuth: User'
       x-codeSamples:
-        $ref: ./example__v1_tools_parse-html.yml#/_v1_tools_parse-html_post
+        $ref: ./example_v1_tools_parse_html.yml#/v1_tools_parse_html_post
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -5008,7 +5006,7 @@ paths:
         - color: red
           label: 'OAuth: User'
       x-codeSamples:
-        $ref: ./example__v1_tools_nsfw.yml#/_v1_tools_nsfw_post
+        $ref: ./example_v1_tools_nsfw.yml#/v1_tools_nsfw_post
       requestBody:
         content:
           multipart/form-data:
@@ -5085,7 +5083,7 @@ paths:
         - OauthClient:
             - twibbon
       x-codeSamples:
-        $ref: ./example__v1_twibbon_dashboard.yml#/_v1_twibbon_dashboard_get
+        $ref: ./example_v1_twibbon_dashboard.yml#/v1_twibbon_dashboard_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -5185,7 +5183,7 @@ paths:
         - OauthClient:
             - twibbon
       x-codeSamples:
-        $ref: ./example__v1_twibbon.yml#/_v1_twibbon_get
+        $ref: ./example_v1_twibbon.yml#/v1_twibbon_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -5285,7 +5283,7 @@ paths:
         - OauthClient:
             - twibbon
       x-codeSamples:
-        $ref: ./example__v1_twibbon_{slug}.yml#/_v1_twibbon_{slug}_get
+        $ref: ./example_v1_twibbon__slug.yml#/v1_twibbon__slug_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -5347,7 +5345,7 @@ paths:
         - OauthUser:
             - twibbon
       x-codeSamples:
-        $ref: ./example__v1_twibbon_{slug}.yml#/_v1_twibbon_{slug}_put
+        $ref: ./example_v1_twibbon__slug.yml#/v1_twibbon__slug_put
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -5413,7 +5411,7 @@ paths:
         - OauthUser:
             - twibbon
       x-codeSamples:
-        $ref: ./example__v1_twibbon_{slug}.yml#/_v1_twibbon_{slug}_delete
+        $ref: ./example_v1_twibbon__slug.yml#/v1_twibbon__slug_delete
       parameters:
         - name: PN-Client-Id
           in: header
@@ -5462,7 +5460,7 @@ paths:
         - OauthClient:
             - thread
       x-codeSamples:
-        $ref: ./example__v1_twitter_thread.yml#/_v1_twitter_thread_get
+        $ref: ./example_v1_twitter_thread.yml#/v1_twitter_thread_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -5564,7 +5562,7 @@ paths:
         - OauthClient:
             - thread
       x-codeSamples:
-        $ref: ./example__v1_twitter_thread.yml#/_v1_twitter_thread_post
+        $ref: ./example_v1_twitter_thread.yml#/v1_twitter_thread_post
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -5641,7 +5639,7 @@ paths:
             - thread
       x-codeSamples:
         $ref: >-
-          ./example__v1_twitter_thread_{tweet_id}.yml#/_v1_twitter_thread_{tweet_id}_get
+          ./example_v1_twitter_thread__tweet_id.yml#/v1_twitter_thread__tweet_id_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -5723,7 +5721,7 @@ paths:
             - thread
       x-codeSamples:
         $ref: >-
-          ./example__v1_twitter_thread_{tweet_id}.yml#/_v1_twitter_thread_{tweet_id}_post
+          ./example_v1_twitter_thread__tweet_id.yml#/v1_twitter_thread__tweet_id_post
       requestBody:
         content: {}
       parameters:
@@ -5774,7 +5772,7 @@ paths:
         - OauthClient:
             - url-shortener
       x-codeSamples:
-        $ref: ./example__v1_url-shortener.yml#/_v1_url-shortener_post
+        $ref: ./example_v1_url_shortener.yml#/v1_url_shortener_post
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -5833,7 +5831,7 @@ paths:
         - OauthUser:
             - url-shortener
       x-codeSamples:
-        $ref: ./example__v1_url-shortener.yml#/_v1_url-shortener_get
+        $ref: ./example_v1_url_shortener.yml#/v1_url_shortener_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -5931,7 +5929,7 @@ paths:
         - OauthUser:
             - url-shortener
       x-codeSamples:
-        $ref: ./example__v1_url-shortener_{id}.yml#/_v1_url-shortener_{id}_delete
+        $ref: ./example_v1_url_shortener__id.yml#/v1_url_shortener__id_delete
       parameters:
         - name: PN-Client-Id
           in: header
@@ -5982,7 +5980,7 @@ paths:
         - OauthUser:
             - email
       x-codeSamples:
-        $ref: ./example__v1_user.yml#/_v1_user_get
+        $ref: ./example_v1_user.yml#/v1_user_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -6032,7 +6030,7 @@ paths:
         - OauthClient:
             - user
       x-codeSamples:
-        $ref: ./example__v1_user_{username}.yml#/_v1_user_{username}_get
+        $ref: ./example_v1_user__username.yml#/v1_user__username_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -6095,7 +6093,7 @@ paths:
         - OauthUser:
             - user
       x-codeSamples:
-        $ref: ./example__v1_user_{username}.yml#/_v1_user_{username}_post
+        $ref: ./example_v1_user__username.yml#/v1_user__username_post
       requestBody:
         content:
           multipart/form-data:
@@ -6161,7 +6159,7 @@ paths:
         - OauthUser:
             - user
       x-codeSamples:
-        $ref: ./example__v1_user_{username}.yml#/_v1_user_{username}_delete
+        $ref: ./example_v1_user__username.yml#/v1_user__username_delete
       parameters:
         - name: PN-Client-Id
           in: header
@@ -6209,7 +6207,7 @@ paths:
         - OauthUser:
             - user
       x-codeSamples:
-        $ref: ./example__v1_user_{username}.yml#/_v1_user_{username}_put
+        $ref: ./example_v1_user__username.yml#/v1_user__username_put
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -6294,7 +6292,7 @@ paths:
             - user
       x-codeSamples:
         $ref: >-
-          ./example__v1_user_{username}_followers.yml#/_v1_user_{username}_followers_get
+          ./example_v1_user__username__followers.yml#/v1_user__username__followers_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -6389,7 +6387,7 @@ paths:
             - user
       x-codeSamples:
         $ref: >-
-          ./example__v1_user_{username}_followers_pending.yml#/_v1_user_{username}_followers_pending_get
+          ./example_v1_user__username__followers_pending.yml#/v1_user__username__followers_pending_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -6503,7 +6501,7 @@ paths:
             - user
       x-codeSamples:
         $ref: >-
-          ./example__v1_user_{username}_followers_pending_{token}.yml#/_v1_user_{username}_followers_pending_{token}_post
+          ./example_v1_user__username__followers_pending__token.yml#/v1_user__username__followers_pending__token_post
       requestBody:
         content: {}
       parameters:
@@ -6564,7 +6562,7 @@ paths:
             - user
       x-codeSamples:
         $ref: >-
-          ./example__v1_user_{username}_followers_pending_{token}.yml#/_v1_user_{username}_followers_pending_{token}_delete
+          ./example_v1_user__username__followers_pending__token.yml#/v1_user__username__followers_pending__token_delete
       parameters:
         - name: PN-Client-Id
           in: header
@@ -6628,7 +6626,7 @@ paths:
             - user
       x-codeSamples:
         $ref: >-
-          ./example__v1_user_{username}_following.yml#/_v1_user_{username}_following_get
+          ./example_v1_user__username__following.yml#/v1_user__username__following_get
       parameters:
         - name: PN-Client-Id
           in: header
@@ -6735,7 +6733,7 @@ paths:
             - user
       x-codeSamples:
         $ref: >-
-          ./example__v1_user_{username}_following_{target_username}.yml#/_v1_user_{username}_following_{target_username}_post
+          ./example_v1_user__username__following__target_username.yml#/v1_user__username__following__target_username_post
       requestBody:
         content: {}
       parameters:
@@ -6810,7 +6808,7 @@ paths:
             - user
       x-codeSamples:
         $ref: >-
-          ./example__v1_user_{username}_following_{target_username}.yml#/_v1_user_{username}_following_{target_username}_delete
+          ./example_v1_user__username__following__target_username.yml#/v1_user__username__following__target_username_delete
       parameters:
         - name: PN-Client-Id
           in: header
@@ -6885,7 +6883,7 @@ paths:
             - user
             - files
       x-codeSamples:
-        $ref: ./example__v1_user_{username}_media.yml#/_v1_user_{username}_media_get
+        $ref: ./example_v1_user__username__media.yml#/v1_user__username__media_get
       parameters:
         - name: PN-Client-Id
           in: header

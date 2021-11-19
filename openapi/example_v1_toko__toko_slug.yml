@@ -1,0 +1,351 @@
+v1_toko__toko_slug_get:
+  - lang: shell
+    label: Shell + Curl
+    source: |-
+      curl --request GET \
+        --url https://api.portalnesia.com/v1/toko/debug \
+        --header 'Authorization: Bearer REPLACE_BEARER_TOKEN' \
+        --header 'PN-Client-Id: Your client id'
+  - lang: javascript
+    label: Node + Axios
+    source: |-
+      var axios = require('axios');
+
+      var config = {
+          headers: {
+            'Authorization': 'Bearer REPLACE_BEARER_TOKEN', 
+            'PN-Client-Id': 'Your client id'
+          }
+      }
+
+      axios.get('https://api.portalnesia.com/v1/toko/{toko_slug}',config)
+      .then(function(response){
+        console.log(response.data)
+      })
+      .catch(function (error) {
+        console.log('error', error);
+      });
+  - lang: javascript
+    label: Javascript + Xhr
+    source: |-
+      const data = null;
+
+      const xhr = new XMLHttpRequest();
+      xhr.withCredentials = true;
+
+      xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === this.DONE) {
+          console.log(this.responseText);
+        }
+      });
+
+      xhr.open("GET", "https://api.portalnesia.com/v1/toko/debug");
+      xhr.setRequestHeader("PN-Client-Id", "Your client id");
+      xhr.setRequestHeader("Authorization", "Bearer REPLACE_BEARER_TOKEN");
+
+      xhr.send(data);
+  - lang: php
+    label: Php + Curl
+    source: |-
+      <?php
+
+      $curl = curl_init();
+
+      curl_setopt_array($curl, [
+        CURLOPT_URL => "https://api.portalnesia.com/v1/toko/debug",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "GET",
+        CURLOPT_HTTPHEADER => [
+          "Authorization: Bearer REPLACE_BEARER_TOKEN",
+          "PN-Client-Id: Your client id"
+        ],
+      ]);
+
+      $response = curl_exec($curl);
+      $err = curl_error($curl);
+
+      curl_close($curl);
+
+      if ($err) {
+        echo "cURL Error #:" . $err;
+      } else {
+        echo $response;
+      }
+  - lang: python
+    label: Python + Python3
+    source: |-
+      import http.client
+
+      conn = http.client.HTTPSConnection("api.portalnesia.com")
+
+      headers = {
+          'PN-Client-Id': "Your client id",
+          'Authorization': "Bearer REPLACE_BEARER_TOKEN"
+          }
+
+      conn.request("GET", "/v1/toko/debug", headers=headers)
+
+      res = conn.getresponse()
+      data = res.read()
+
+      print(data.decode("utf-8"))
+  - lang: java
+    label: Java + Unirest
+    source: >-
+      HttpResponse<String> response =
+      Unirest.get("https://api.portalnesia.com/v1/toko/debug")
+        .header("PN-Client-Id", "Your client id")
+        .header("Authorization", "Bearer REPLACE_BEARER_TOKEN")
+        .asString();
+v1_toko__toko_slug_put:
+  - lang: shell
+    label: Shell + Curl
+    source: |-
+      curl --request PUT \
+        --url https://api.portalnesia.com/v1/toko/debug \
+        --header 'Authorization: Bearer REPLACE_BEARER_TOKEN' \
+        --header 'PN-Client-Id: Your client id' \
+        --header 'content-type: application/x-www-form-urlencoded' \
+        --data name=Debug \
+        --data 'description=New+Debug+Toko' \
+        --data logo=https%3A%2F%2F \
+        --data slogan=%23DebugToBug \
+        --data 'address=Jalan-jalan+no.1+' \
+        --data 'footer=Stay+Safe+and+Healthy'
+  - lang: javascript
+    label: Node + Axios
+    source: |-
+      var axios = require('axios');
+      var qs = require('qs');
+
+      var data = qs.stringify({
+         'name': 'Debug'
+         'description': 'New Debug Toko'
+         'logo': 'https://'
+         'slogan': '#DebugToBug'
+         'address': 'Jalan-jalan no.1 '
+         'footer': 'Stay Safe and Healthy'
+      })
+
+      var config = {
+        headers: {
+          'Authorization': 'Bearer REPLACE_BEARER_TOKEN', 
+          'PN-Client-Id': 'Your client id',
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }
+      }
+
+      axios.put('https://api.portalnesia.com/v1/toko/{toko_slug}',data,config)
+      .then(function(response){
+        console.log(response.data)
+      })
+      .catch(function (error) {
+        console.log('error', error);
+      });
+  - lang: javascript
+    label: Javascript + Xhr
+    source: >-
+      const data =
+      "name=Debug&description=New%2BDebug%2BToko&logo=https%253A%252F%252F&slogan=%2523DebugToBug&address=Jalan-jalan%2Bno.1%2B&footer=Stay%2BSafe%2Band%2BHealthy";
+
+
+      const xhr = new XMLHttpRequest();
+
+      xhr.withCredentials = true;
+
+
+      xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === this.DONE) {
+          console.log(this.responseText);
+        }
+      });
+
+
+      xhr.open("PUT", "https://api.portalnesia.com/v1/toko/debug");
+
+      xhr.setRequestHeader("PN-Client-Id", "Your client id");
+
+      xhr.setRequestHeader("Authorization", "Bearer REPLACE_BEARER_TOKEN");
+
+      xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+
+
+      xhr.send(data);
+  - lang: php
+    label: Php + Curl
+    source: |-
+      <?php
+
+      $curl = curl_init();
+
+      curl_setopt_array($curl, [
+        CURLOPT_URL => "https://api.portalnesia.com/v1/toko/debug",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "PUT",
+        CURLOPT_POSTFIELDS => "name=Debug&description=New%2BDebug%2BToko&logo=https%253A%252F%252F&slogan=%2523DebugToBug&address=Jalan-jalan%2Bno.1%2B&footer=Stay%2BSafe%2Band%2BHealthy",
+        CURLOPT_HTTPHEADER => [
+          "Authorization: Bearer REPLACE_BEARER_TOKEN",
+          "PN-Client-Id: Your client id",
+          "content-type: application/x-www-form-urlencoded"
+        ],
+      ]);
+
+      $response = curl_exec($curl);
+      $err = curl_error($curl);
+
+      curl_close($curl);
+
+      if ($err) {
+        echo "cURL Error #:" . $err;
+      } else {
+        echo $response;
+      }
+  - lang: python
+    label: Python + Python3
+    source: >-
+      import http.client
+
+
+      conn = http.client.HTTPSConnection("api.portalnesia.com")
+
+
+      payload =
+      "name=Debug&description=New%2BDebug%2BToko&logo=https%253A%252F%252F&slogan=%2523DebugToBug&address=Jalan-jalan%2Bno.1%2B&footer=Stay%2BSafe%2Band%2BHealthy"
+
+
+      headers = {
+          'PN-Client-Id': "Your client id",
+          'Authorization': "Bearer REPLACE_BEARER_TOKEN",
+          'content-type': "application/x-www-form-urlencoded"
+          }
+
+      conn.request("PUT", "/v1/toko/debug", payload, headers)
+
+
+      res = conn.getresponse()
+
+      data = res.read()
+
+
+      print(data.decode("utf-8"))
+  - lang: java
+    label: Java + Unirest
+    source: >-
+      HttpResponse<String> response =
+      Unirest.put("https://api.portalnesia.com/v1/toko/debug")
+        .header("PN-Client-Id", "Your client id")
+        .header("Authorization", "Bearer REPLACE_BEARER_TOKEN")
+        .header("content-type", "application/x-www-form-urlencoded")
+        .body("name=Debug&description=New%2BDebug%2BToko&logo=https%253A%252F%252F&slogan=%2523DebugToBug&address=Jalan-jalan%2Bno.1%2B&footer=Stay%2BSafe%2Band%2BHealthy")
+        .asString();
+v1_toko__toko_slug_delete:
+  - lang: shell
+    label: Shell + Curl
+    source: |-
+      curl --request DELETE \
+        --url https://api.portalnesia.com/v1/toko/debug \
+        --header 'Authorization: Bearer REPLACE_BEARER_TOKEN' \
+        --header 'PN-Client-Id: Your client id'
+  - lang: javascript
+    label: Node + Axios
+    source: |-
+      var axios = require('axios');
+
+      var config = {
+          headers: {
+            'Authorization': 'Bearer REPLACE_BEARER_TOKEN', 
+            'PN-Client-Id': 'Your client id'
+          }
+      }
+
+      axios.delete('https://api.portalnesia.com/v1/toko/{toko_slug}',config)
+      .then(function(response){
+        console.log(response.data)
+      })
+      .catch(function (error) {
+        console.log('error', error);
+      });
+  - lang: javascript
+    label: Javascript + Xhr
+    source: |-
+      const data = null;
+
+      const xhr = new XMLHttpRequest();
+      xhr.withCredentials = true;
+
+      xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === this.DONE) {
+          console.log(this.responseText);
+        }
+      });
+
+      xhr.open("DELETE", "https://api.portalnesia.com/v1/toko/debug");
+      xhr.setRequestHeader("PN-Client-Id", "Your client id");
+      xhr.setRequestHeader("Authorization", "Bearer REPLACE_BEARER_TOKEN");
+
+      xhr.send(data);
+  - lang: php
+    label: Php + Curl
+    source: |-
+      <?php
+
+      $curl = curl_init();
+
+      curl_setopt_array($curl, [
+        CURLOPT_URL => "https://api.portalnesia.com/v1/toko/debug",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "DELETE",
+        CURLOPT_HTTPHEADER => [
+          "Authorization: Bearer REPLACE_BEARER_TOKEN",
+          "PN-Client-Id: Your client id"
+        ],
+      ]);
+
+      $response = curl_exec($curl);
+      $err = curl_error($curl);
+
+      curl_close($curl);
+
+      if ($err) {
+        echo "cURL Error #:" . $err;
+      } else {
+        echo $response;
+      }
+  - lang: python
+    label: Python + Python3
+    source: |-
+      import http.client
+
+      conn = http.client.HTTPSConnection("api.portalnesia.com")
+
+      headers = {
+          'PN-Client-Id': "Your client id",
+          'Authorization': "Bearer REPLACE_BEARER_TOKEN"
+          }
+
+      conn.request("DELETE", "/v1/toko/debug", headers=headers)
+
+      res = conn.getresponse()
+      data = res.read()
+
+      print(data.decode("utf-8"))
+  - lang: java
+    label: Java + Unirest
+    source: >-
+      HttpResponse<String> response =
+      Unirest.delete("https://api.portalnesia.com/v1/toko/debug")
+        .header("PN-Client-Id", "Your client id")
+        .header("Authorization", "Bearer REPLACE_BEARER_TOKEN")
+        .asString();

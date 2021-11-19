@@ -1,0 +1,345 @@
+v1_twibbon__slug_get:
+  - lang: shell
+    label: Shell + Curl
+    source: |-
+      curl --request GET \
+        --url https://api.portalnesia.com/v1/twibbon/twibbon-slug \
+        --header 'Authorization: Bearer REPLACE_BEARER_TOKEN' \
+        --header 'PN-Client-Id: Your client id'
+  - lang: javascript
+    label: Node + Axios
+    source: |-
+      var axios = require('axios');
+
+      var config = {
+          headers: {
+            'Authorization': 'Bearer REPLACE_BEARER_TOKEN', 
+            'PN-Client-Id': 'Your client id'
+          }
+      }
+
+      axios.get('https://api.portalnesia.com/v1/twibbon/{slug}',config)
+      .then(function(response){
+        console.log(response.data)
+      })
+      .catch(function (error) {
+        console.log('error', error);
+      });
+  - lang: javascript
+    label: Javascript + Xhr
+    source: |-
+      const data = null;
+
+      const xhr = new XMLHttpRequest();
+      xhr.withCredentials = true;
+
+      xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === this.DONE) {
+          console.log(this.responseText);
+        }
+      });
+
+      xhr.open("GET", "https://api.portalnesia.com/v1/twibbon/twibbon-slug");
+      xhr.setRequestHeader("PN-Client-Id", "Your client id");
+      xhr.setRequestHeader("Authorization", "Bearer REPLACE_BEARER_TOKEN");
+
+      xhr.send(data);
+  - lang: php
+    label: Php + Curl
+    source: |-
+      <?php
+
+      $curl = curl_init();
+
+      curl_setopt_array($curl, [
+        CURLOPT_URL => "https://api.portalnesia.com/v1/twibbon/twibbon-slug",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "GET",
+        CURLOPT_HTTPHEADER => [
+          "Authorization: Bearer REPLACE_BEARER_TOKEN",
+          "PN-Client-Id: Your client id"
+        ],
+      ]);
+
+      $response = curl_exec($curl);
+      $err = curl_error($curl);
+
+      curl_close($curl);
+
+      if ($err) {
+        echo "cURL Error #:" . $err;
+      } else {
+        echo $response;
+      }
+  - lang: python
+    label: Python + Python3
+    source: |-
+      import http.client
+
+      conn = http.client.HTTPSConnection("api.portalnesia.com")
+
+      headers = {
+          'PN-Client-Id': "Your client id",
+          'Authorization': "Bearer REPLACE_BEARER_TOKEN"
+          }
+
+      conn.request("GET", "/v1/twibbon/twibbon-slug", headers=headers)
+
+      res = conn.getresponse()
+      data = res.read()
+
+      print(data.decode("utf-8"))
+  - lang: java
+    label: Java + Unirest
+    source: >-
+      HttpResponse<String> response =
+      Unirest.get("https://api.portalnesia.com/v1/twibbon/twibbon-slug")
+        .header("PN-Client-Id", "Your client id")
+        .header("Authorization", "Bearer REPLACE_BEARER_TOKEN")
+        .asString();
+v1_twibbon__slug_put:
+  - lang: shell
+    label: Shell + Curl
+    source: |-
+      curl --request PUT \
+        --url https://api.portalnesia.com/v1/twibbon/twibbon-slug \
+        --header 'Authorization: Bearer REPLACE_BEARER_TOKEN' \
+        --header 'PN-Client-Id: Your client id' \
+        --header 'content-type: application/x-www-form-urlencoded' \
+        --data 'title=Example+Title' \
+        --data 'description=Example+description' \
+        --data publish=false
+  - lang: javascript
+    label: Node + Axios
+    source: |-
+      var axios = require('axios');
+      var qs = require('qs');
+
+      var data = qs.stringify({
+         'title': 'Example Title'
+         'description': 'Example description'
+         'publish': 'false'
+      })
+
+      var config = {
+        headers: {
+          'Authorization': 'Bearer REPLACE_BEARER_TOKEN', 
+          'PN-Client-Id': 'Your client id',
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }
+      }
+
+      axios.put('https://api.portalnesia.com/v1/twibbon/{slug}',data,config)
+      .then(function(response){
+        console.log(response.data)
+      })
+      .catch(function (error) {
+        console.log('error', error);
+      });
+  - lang: javascript
+    label: Javascript + Xhr
+    source: >-
+      const data =
+      "title=Example%2BTitle&description=Example%2Bdescription&publish=false";
+
+
+      const xhr = new XMLHttpRequest();
+
+      xhr.withCredentials = true;
+
+
+      xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === this.DONE) {
+          console.log(this.responseText);
+        }
+      });
+
+
+      xhr.open("PUT", "https://api.portalnesia.com/v1/twibbon/twibbon-slug");
+
+      xhr.setRequestHeader("PN-Client-Id", "Your client id");
+
+      xhr.setRequestHeader("Authorization", "Bearer REPLACE_BEARER_TOKEN");
+
+      xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+
+
+      xhr.send(data);
+  - lang: php
+    label: Php + Curl
+    source: |-
+      <?php
+
+      $curl = curl_init();
+
+      curl_setopt_array($curl, [
+        CURLOPT_URL => "https://api.portalnesia.com/v1/twibbon/twibbon-slug",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "PUT",
+        CURLOPT_POSTFIELDS => "title=Example%2BTitle&description=Example%2Bdescription&publish=false",
+        CURLOPT_HTTPHEADER => [
+          "Authorization: Bearer REPLACE_BEARER_TOKEN",
+          "PN-Client-Id: Your client id",
+          "content-type: application/x-www-form-urlencoded"
+        ],
+      ]);
+
+      $response = curl_exec($curl);
+      $err = curl_error($curl);
+
+      curl_close($curl);
+
+      if ($err) {
+        echo "cURL Error #:" . $err;
+      } else {
+        echo $response;
+      }
+  - lang: python
+    label: Python + Python3
+    source: >-
+      import http.client
+
+
+      conn = http.client.HTTPSConnection("api.portalnesia.com")
+
+
+      payload =
+      "title=Example%2BTitle&description=Example%2Bdescription&publish=false"
+
+
+      headers = {
+          'PN-Client-Id': "Your client id",
+          'Authorization': "Bearer REPLACE_BEARER_TOKEN",
+          'content-type': "application/x-www-form-urlencoded"
+          }
+
+      conn.request("PUT", "/v1/twibbon/twibbon-slug", payload, headers)
+
+
+      res = conn.getresponse()
+
+      data = res.read()
+
+
+      print(data.decode("utf-8"))
+  - lang: java
+    label: Java + Unirest
+    source: >-
+      HttpResponse<String> response =
+      Unirest.put("https://api.portalnesia.com/v1/twibbon/twibbon-slug")
+        .header("PN-Client-Id", "Your client id")
+        .header("Authorization", "Bearer REPLACE_BEARER_TOKEN")
+        .header("content-type", "application/x-www-form-urlencoded")
+        .body("title=Example%2BTitle&description=Example%2Bdescription&publish=false")
+        .asString();
+v1_twibbon__slug_delete:
+  - lang: shell
+    label: Shell + Curl
+    source: |-
+      curl --request DELETE \
+        --url https://api.portalnesia.com/v1/twibbon/twibbon-slug \
+        --header 'Authorization: Bearer REPLACE_BEARER_TOKEN' \
+        --header 'PN-Client-Id: Your client id'
+  - lang: javascript
+    label: Node + Axios
+    source: |-
+      var axios = require('axios');
+
+      var config = {
+          headers: {
+            'Authorization': 'Bearer REPLACE_BEARER_TOKEN', 
+            'PN-Client-Id': 'Your client id'
+          }
+      }
+
+      axios.delete('https://api.portalnesia.com/v1/twibbon/{slug}',config)
+      .then(function(response){
+        console.log(response.data)
+      })
+      .catch(function (error) {
+        console.log('error', error);
+      });
+  - lang: javascript
+    label: Javascript + Xhr
+    source: |-
+      const data = null;
+
+      const xhr = new XMLHttpRequest();
+      xhr.withCredentials = true;
+
+      xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === this.DONE) {
+          console.log(this.responseText);
+        }
+      });
+
+      xhr.open("DELETE", "https://api.portalnesia.com/v1/twibbon/twibbon-slug");
+      xhr.setRequestHeader("PN-Client-Id", "Your client id");
+      xhr.setRequestHeader("Authorization", "Bearer REPLACE_BEARER_TOKEN");
+
+      xhr.send(data);
+  - lang: php
+    label: Php + Curl
+    source: |-
+      <?php
+
+      $curl = curl_init();
+
+      curl_setopt_array($curl, [
+        CURLOPT_URL => "https://api.portalnesia.com/v1/twibbon/twibbon-slug",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "DELETE",
+        CURLOPT_HTTPHEADER => [
+          "Authorization: Bearer REPLACE_BEARER_TOKEN",
+          "PN-Client-Id: Your client id"
+        ],
+      ]);
+
+      $response = curl_exec($curl);
+      $err = curl_error($curl);
+
+      curl_close($curl);
+
+      if ($err) {
+        echo "cURL Error #:" . $err;
+      } else {
+        echo $response;
+      }
+  - lang: python
+    label: Python + Python3
+    source: |-
+      import http.client
+
+      conn = http.client.HTTPSConnection("api.portalnesia.com")
+
+      headers = {
+          'PN-Client-Id': "Your client id",
+          'Authorization': "Bearer REPLACE_BEARER_TOKEN"
+          }
+
+      conn.request("DELETE", "/v1/twibbon/twibbon-slug", headers=headers)
+
+      res = conn.getresponse()
+      data = res.read()
+
+      print(data.decode("utf-8"))
+  - lang: java
+    label: Java + Unirest
+    source: >-
+      HttpResponse<String> response =
+      Unirest.delete("https://api.portalnesia.com/v1/twibbon/twibbon-slug")
+        .header("PN-Client-Id", "Your client id")
+        .header("Authorization", "Bearer REPLACE_BEARER_TOKEN")
+        .asString();
