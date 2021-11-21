@@ -7495,6 +7495,410 @@ paths:
                     name: Name
                     username: username
                     picture: https://content.portalnesia.com/....
+  /v1/quiz/{quiz_id}/response:
+    get:
+      tags:
+        - Quiz
+      summary: Get Quiz Response
+      x-badges:
+        - color: red
+          label: 'OAuth: User'
+        - color: yellow
+          label: 'Scope: quiz'
+      security:
+        - OauthUser:
+            - quiz
+      x-codeSamples:
+        - lang: shell
+          label: Shell + Curl
+          source: |-
+            curl --request GET \
+              --url 'https://api.portalnesia.com/v1/quiz/e69e4df8-c112-59f0-9b5b-f33cdc5a9064/response?page=1&per_page=15' \
+              --header 'Authorization: Bearer REPLACE_BEARER_TOKEN' \
+              --header 'PN-Client-Id: Your client id'
+        - lang: javascript
+          label: Node + Axios
+          source: >-
+            var axios = require('axios');
+
+
+            var config = {
+                headers: {
+                  'Authorization': 'Bearer REPLACE_BEARER_TOKEN', 
+                  'PN-Client-Id': 'Your client id'
+                }
+            }
+
+
+            axios.get('https://api.portalnesia.com/v1/quiz/{quiz_id}/response',config)
+
+            .then(function(response){
+              console.log(response.data)
+            })
+
+            .catch(function (error) {
+              console.log('error', error);
+            });
+        - lang: javascript
+          label: Javascript + Xhr
+          source: >-
+            const data = null;
+
+
+            const xhr = new XMLHttpRequest();
+
+            xhr.withCredentials = true;
+
+
+            xhr.addEventListener("readystatechange", function () {
+              if (this.readyState === this.DONE) {
+                console.log(this.responseText);
+              }
+            });
+
+
+            xhr.open("GET",
+            "https://api.portalnesia.com/v1/quiz/e69e4df8-c112-59f0-9b5b-f33cdc5a9064/response?page=1&per_page=15");
+
+            xhr.setRequestHeader("PN-Client-Id", "Your client id");
+
+            xhr.setRequestHeader("Authorization", "Bearer
+            REPLACE_BEARER_TOKEN");
+
+
+            xhr.send(data);
+        - lang: php
+          label: Php + Curl
+          source: |-
+            <?php
+
+            $curl = curl_init();
+
+            curl_setopt_array($curl, [
+              CURLOPT_URL => "https://api.portalnesia.com/v1/quiz/e69e4df8-c112-59f0-9b5b-f33cdc5a9064/response?page=1&per_page=15",
+              CURLOPT_RETURNTRANSFER => true,
+              CURLOPT_ENCODING => "",
+              CURLOPT_MAXREDIRS => 10,
+              CURLOPT_TIMEOUT => 30,
+              CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+              CURLOPT_CUSTOMREQUEST => "GET",
+              CURLOPT_HTTPHEADER => [
+                "Authorization: Bearer REPLACE_BEARER_TOKEN",
+                "PN-Client-Id: Your client id"
+              ],
+            ]);
+
+            $response = curl_exec($curl);
+            $err = curl_error($curl);
+
+            curl_close($curl);
+
+            if ($err) {
+              echo "cURL Error #:" . $err;
+            } else {
+              echo $response;
+            }
+        - lang: python
+          label: Python + Python3
+          source: >-
+            import http.client
+
+
+            conn = http.client.HTTPSConnection("api.portalnesia.com")
+
+
+            headers = {
+                'PN-Client-Id': "Your client id",
+                'Authorization': "Bearer REPLACE_BEARER_TOKEN"
+                }
+
+            conn.request("GET",
+            "/v1/quiz/e69e4df8-c112-59f0-9b5b-f33cdc5a9064/response?page=1&per_page=15",
+            headers=headers)
+
+
+            res = conn.getresponse()
+
+            data = res.read()
+
+
+            print(data.decode("utf-8"))
+        - lang: java
+          label: Java + Unirest
+          source: >-
+            HttpResponse<String> response =
+            Unirest.get("https://api.portalnesia.com/v1/quiz/e69e4df8-c112-59f0-9b5b-f33cdc5a9064/response?page=1&per_page=15")
+              .header("PN-Client-Id", "Your client id")
+              .header("Authorization", "Bearer REPLACE_BEARER_TOKEN")
+              .asString();
+      parameters:
+        - name: PN-Client-Id
+          in: header
+          schema:
+            type: string
+          required: true
+          description: Client Id
+          example: Your client id
+        - name: page
+          in: query
+          schema:
+            type: integer
+          required: true
+          description: |-
+            Number of page.     
+            Default 1
+          example: '1'
+        - name: per_page
+          in: query
+          schema:
+            type: integer
+          required: true
+          description: |-
+            Number of total data per page.   
+            Default 15   
+            Max 50
+          example: '15'
+        - name: quiz_id
+          in: path
+          schema:
+            type: string
+          required: true
+          description: Quiz ID
+          example: e69e4df8-c112-59f0-9b5b-f33cdc5a9064
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: boolean
+                  message:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      page:
+                        type: integer
+                        description: Current page
+                      total:
+                        type: integer
+                        description: Total ammount of data
+                      total_page:
+                        type: integer
+                        description: Total number of pages
+                      can_load:
+                        type: boolean
+                        description: Status if this list have next page
+                      data:
+                        type: array
+                        items:
+                          $ref: ./schemas.json#/schemas/quiz_response_pagination
+              example:
+                error: false
+                message: OK
+                data:
+                  page: 1
+                  total: 1
+                  total_page: 1
+                  can_load: false
+                  data:
+                    - id: 06eef744-e32e-5836-9c61-b8d564818ea4
+                      name: John Doe
+                      score: 50
+                      timestamp: 1637497424
+  /v1/quiz/{quiz_id}/response/{response_id}:
+    get:
+      tags:
+        - Quiz
+      summary: Get Quiz Response Detail
+      x-badges:
+        - color: red
+          label: 'OAuth: User'
+        - color: yellow
+          label: 'Scope: quiz'
+      security:
+        - OauthUser:
+            - quiz
+      x-codeSamples:
+        - lang: shell
+          label: Shell + Curl
+          source: |-
+            curl --request GET \
+              --url https://api.portalnesia.com/v1/quiz/e69e4df8-c112-59f0-9b5b-f33cdc5a9064/response/06eef744-e32e-5836-9c61-b8d564818ea4 \
+              --header 'Authorization: Bearer REPLACE_BEARER_TOKEN' \
+              --header 'PN-Client-Id: Your client id'
+        - lang: javascript
+          label: Node + Axios
+          source: >-
+            var axios = require('axios');
+
+
+            var config = {
+                headers: {
+                  'Authorization': 'Bearer REPLACE_BEARER_TOKEN', 
+                  'PN-Client-Id': 'Your client id'
+                }
+            }
+
+
+            axios.get('https://api.portalnesia.com/v1/quiz/{quiz_id}/response/{response_id}',config)
+
+            .then(function(response){
+              console.log(response.data)
+            })
+
+            .catch(function (error) {
+              console.log('error', error);
+            });
+        - lang: javascript
+          label: Javascript + Xhr
+          source: >-
+            const data = null;
+
+
+            const xhr = new XMLHttpRequest();
+
+            xhr.withCredentials = true;
+
+
+            xhr.addEventListener("readystatechange", function () {
+              if (this.readyState === this.DONE) {
+                console.log(this.responseText);
+              }
+            });
+
+
+            xhr.open("GET",
+            "https://api.portalnesia.com/v1/quiz/e69e4df8-c112-59f0-9b5b-f33cdc5a9064/response/06eef744-e32e-5836-9c61-b8d564818ea4");
+
+            xhr.setRequestHeader("PN-Client-Id", "Your client id");
+
+            xhr.setRequestHeader("Authorization", "Bearer
+            REPLACE_BEARER_TOKEN");
+
+
+            xhr.send(data);
+        - lang: php
+          label: Php + Curl
+          source: |-
+            <?php
+
+            $curl = curl_init();
+
+            curl_setopt_array($curl, [
+              CURLOPT_URL => "https://api.portalnesia.com/v1/quiz/e69e4df8-c112-59f0-9b5b-f33cdc5a9064/response/06eef744-e32e-5836-9c61-b8d564818ea4",
+              CURLOPT_RETURNTRANSFER => true,
+              CURLOPT_ENCODING => "",
+              CURLOPT_MAXREDIRS => 10,
+              CURLOPT_TIMEOUT => 30,
+              CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+              CURLOPT_CUSTOMREQUEST => "GET",
+              CURLOPT_HTTPHEADER => [
+                "Authorization: Bearer REPLACE_BEARER_TOKEN",
+                "PN-Client-Id: Your client id"
+              ],
+            ]);
+
+            $response = curl_exec($curl);
+            $err = curl_error($curl);
+
+            curl_close($curl);
+
+            if ($err) {
+              echo "cURL Error #:" . $err;
+            } else {
+              echo $response;
+            }
+        - lang: python
+          label: Python + Python3
+          source: >-
+            import http.client
+
+
+            conn = http.client.HTTPSConnection("api.portalnesia.com")
+
+
+            headers = {
+                'PN-Client-Id': "Your client id",
+                'Authorization': "Bearer REPLACE_BEARER_TOKEN"
+                }
+
+            conn.request("GET",
+            "/v1/quiz/e69e4df8-c112-59f0-9b5b-f33cdc5a9064/response/06eef744-e32e-5836-9c61-b8d564818ea4",
+            headers=headers)
+
+
+            res = conn.getresponse()
+
+            data = res.read()
+
+
+            print(data.decode("utf-8"))
+        - lang: java
+          label: Java + Unirest
+          source: >-
+            HttpResponse<String> response =
+            Unirest.get("https://api.portalnesia.com/v1/quiz/e69e4df8-c112-59f0-9b5b-f33cdc5a9064/response/06eef744-e32e-5836-9c61-b8d564818ea4")
+              .header("PN-Client-Id", "Your client id")
+              .header("Authorization", "Bearer REPLACE_BEARER_TOKEN")
+              .asString();
+      parameters:
+        - name: PN-Client-Id
+          in: header
+          schema:
+            type: string
+          required: true
+          description: Client Id
+          example: Your client id
+        - name: quiz_id
+          in: path
+          schema:
+            type: string
+          required: true
+          description: Quiz ID
+          example: e69e4df8-c112-59f0-9b5b-f33cdc5a9064
+        - name: response_id
+          in: path
+          schema:
+            type: string
+          required: true
+          description: Response ID
+          example: 06eef744-e32e-5836-9c61-b8d564818ea4
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: boolean
+                  message:
+                    type: string
+                  data:
+                    $ref: ./schemas.json#/schemas/quiz_response
+              example:
+                error: false
+                message: OK
+                data:
+                  id: 06eef744-e32e-5836-9c61-b8d564818ea4
+                  name: John Doe
+                  score: 50
+                  timestamp: 1637497424
+                  result:
+                    - question: Siapa?
+                      answer: kepi
+                      correct_answer: kepo
+                    - question: Dimana?
+                      answer: Disini
+                      correct_answer: Disini
+                  quiz:
+                    id: e69e4df8-c112-59f0-9b5b-f33cdc5a9064
+                    title: Debug
   /v1/search:
     get:
       tags:
