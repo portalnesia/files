@@ -17272,13 +17272,14 @@ components:
             comments: >-
               Access comments endpoint, have read and write access to user's
               comments
-            chord: Access chord endpoint
+            chord: Access chord endpoint, have read access to user's chord
             files: Access files endpoint, have read and write access to user's files
             geodata: Access geodata endpoint
             likes: Access likes endpoint, have read and write access to user's likes
             messages: >-
               Access messages endpoint, have read and write access to user's
               messages
+            quiz: Access quiz endpoint, have read access to user's messages
             toko: Access toko endpoint, have read and write access to user's toko
             twibbon: >-
               Access twibbon endpoint, have read and write access to user's
@@ -17308,6 +17309,7 @@ components:
             chord: Read access to chord endpoint
             comments: Read access to comments endpoint
             geodata: Access to geodata endpoint
+            quiz: Access quiz endpoint
             twibbon: Read access to twibbon endpoint
             thread: Access to twitter thread endpoint
             toko: Read access to toko items
