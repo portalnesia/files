@@ -228,7 +228,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: ./schemas.yml#/schemas/blog_pagination
+                          $ref: ./schemas.json#/schemas/blog_pagination
               example:
                 error: false
                 message: OK
@@ -686,7 +686,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: ./schemas.yml#/schemas/blog_pagination
+                          $ref: ./schemas.json#/schemas/blog_pagination
               example:
                 error: false
                 message: OK
@@ -1321,7 +1321,7 @@ paths:
                   message:
                     type: string
                   data:
-                    $ref: ./schemas.yml#/schemas/blog
+                    $ref: ./schemas.json#/schemas/blog
               example:
                 error: false
                 message: OK
@@ -1553,7 +1553,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: ./schemas.yml#/schemas/blog_pagination
+                          $ref: ./schemas.json#/schemas/blog_pagination
               example:
                 error: false
                 message: OK
@@ -1788,7 +1788,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: ./schemas.yml#/schemas/blog_pagination
+                          $ref: ./schemas.json#/schemas/blog_pagination
               example:
                 error: false
                 message: OK
@@ -2193,7 +2193,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: ./schemas.yml#/schemas/comment_pagination
+                          $ref: ./schemas.json#/schemas/comment_pagination
               example:
                 error: false
                 message: OK
@@ -2469,7 +2469,7 @@ paths:
                   message:
                     type: string
                   data:
-                    $ref: ./schemas.yml#/schemas/comment_pagination
+                    $ref: ./schemas.json#/schemas/comment_pagination
               example:
                 error: false
                 message: OK
@@ -2713,7 +2713,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: ./schemas.yml#/schemas/comment_reply_pagination
+                          $ref: ./schemas.json#/schemas/comment_reply_pagination
               example:
                 error: false
                 message: OK
@@ -3107,7 +3107,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: ./schemas.yml#/schemas/chord_pagination
+                          $ref: ./schemas.json#/schemas/chord_pagination
               example:
                 error: false
                 message: OK
@@ -3337,7 +3337,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: ./schemas.yml#/schemas/chord_pagination
+                          $ref: ./schemas.json#/schemas/chord_pagination
               example:
                 error: false
                 message: OK
@@ -3569,7 +3569,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: ./schemas.yml#/schemas/chord_pagination
+                          $ref: ./schemas.json#/schemas/chord_pagination
               example:
                 error: false
                 message: OK
@@ -3975,7 +3975,7 @@ paths:
                   message:
                     type: string
                   data:
-                    $ref: ./schemas.yml#/schemas/chord
+                    $ref: ./schemas.json#/schemas/chord
               example:
                 error: false
                 message: OK
@@ -4201,7 +4201,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: ./schemas.yml#/schemas/files_pagination
+                          $ref: ./schemas.json#/schemas/files_pagination
               example:
                 error: false
                 message: OK
@@ -4583,7 +4583,7 @@ paths:
                   message:
                     type: string
                   data:
-                    $ref: ./schemas.yml#/schemas/files
+                    $ref: ./schemas.json#/schemas/files
               example:
                 error: false
                 message: OK
@@ -5188,7 +5188,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: ./schemas.yml#/schemas/geodata_epsg_pagination
+                          $ref: ./schemas.json#/schemas/geodata_epsg_pagination
               example:
                 error: false
                 message: OK
@@ -5614,9 +5614,9 @@ paths:
                               type: array
                               items:
                                 oneOf:
-                                  - $ref: ./schemas.yml#/schemas/chord_pagination
-                                  - $ref: ./schemas.yml#/schemas/blog_pagination
-                                  - $ref: ./schemas.yml#/schemas/twitter_pagination
+                                  - $ref: ./schemas.json#/schemas/chord_pagination
+                                  - $ref: ./schemas.json#/schemas/blog_pagination
+                                  - $ref: ./schemas.json#/schemas/twitter_pagination
               example:
                 error: false
                 message: OK
@@ -5884,9 +5884,9 @@ paths:
                             type: array
                             items:
                               oneOf:
-                                - $ref: ./schemas.yml#/schemas/chord_pagination
-                                - $ref: ./schemas.yml#/schemas/blog_pagination
-                                - $ref: ./schemas.yml#/schemas/twitter_pagination
+                                - $ref: ./schemas.json#/schemas/chord_pagination
+                                - $ref: ./schemas.json#/schemas/blog_pagination
+                                - $ref: ./schemas.json#/schemas/twitter_pagination
               example:
                 error: false
                 message: OK
@@ -6274,7 +6274,7 @@ paths:
                             read:
                               type: boolean
                             user:
-                              $ref: ./schemas.yml#/schemas/user_pagination
+                              $ref: ./schemas.json#/schemas/user_pagination
               example:
                 error: false
                 message: OK
@@ -6482,7 +6482,7 @@ paths:
                       read:
                         type: boolean
                       user:
-                        $ref: ./schemas.yml#/schemas/user_pagination
+                        $ref: ./schemas.json#/schemas/user_pagination
               example:
                 error: false
                 message: OK
@@ -6695,7 +6695,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: ./schemas.yml#/schemas/messages_pagination
+                          $ref: ./schemas.json#/schemas/messages_pagination
               example:
                 error: false
                 message: OK
@@ -6914,7 +6914,7 @@ paths:
                   message:
                     type: string
                   data:
-                    $ref: ./schemas.yml#/schemas/messages_pagination
+                    $ref: ./schemas.json#/schemas/messages_pagination
               example:
                 error: false
                 message: OK
@@ -7291,7 +7291,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: ./schemas.yml#/schemas/quiz_pagination
+                          $ref: ./schemas.json#/schemas/quiz_pagination
               example:
                 error: false
                 message: OK
@@ -7469,7 +7469,7 @@ paths:
                   message:
                     type: string
                   data:
-                    $ref: ./schemas.yml#/schemas/quiz
+                    $ref: ./schemas.json#/schemas/quiz
               example:
                 error: false
                 message: OK
@@ -7658,10 +7658,10 @@ paths:
                               type: array
                               items:
                                 oneOf:
-                                  - $ref: ./schemas.yml#/schemas/chord_pagination
-                                  - $ref: ./schemas.yml#/schemas/blog_pagination
-                                  - $ref: ./schemas.yml#/schemas/twitter_pagination
-                                  - $ref: ./schemas.yml#/schemas/user_pagination
+                                  - $ref: ./schemas.json#/schemas/chord_pagination
+                                  - $ref: ./schemas.json#/schemas/blog_pagination
+                                  - $ref: ./schemas.json#/schemas/twitter_pagination
+                                  - $ref: ./schemas.json#/schemas/user_pagination
               example:
                 error: false
                 message: OK
@@ -7931,10 +7931,10 @@ paths:
                             type: array
                             items:
                               oneOf:
-                                - $ref: ./schemas.yml#/schemas/chord_pagination
-                                - $ref: ./schemas.yml#/schemas/blog_pagination
-                                - $ref: ./schemas.yml#/schemas/twitter_pagination
-                                - $ref: ./schemas.yml#/schemas/user_pagination
+                                - $ref: ./schemas.json#/schemas/chord_pagination
+                                - $ref: ./schemas.json#/schemas/blog_pagination
+                                - $ref: ./schemas.json#/schemas/twitter_pagination
+                                - $ref: ./schemas.json#/schemas/user_pagination
               example:
                 error: false
                 message: OK
@@ -8167,7 +8167,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: ./schemas.yml#/schemas/toko_item_pagination
+                          $ref: ./schemas.json#/schemas/toko_item_pagination
               example:
                 error: false
                 message: OK
@@ -9110,7 +9110,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: ./schemas.yml#/schemas/toko_transaction_pagination
+                          $ref: ./schemas.json#/schemas/toko_transaction_pagination
               example:
                 error: false
                 message: OK
@@ -10286,7 +10286,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: ./schemas.yml#/schemas/toko_pagination
+                          $ref: ./schemas.json#/schemas/toko_pagination
               example:
                 error: false
                 message: OK
@@ -10690,7 +10690,7 @@ paths:
                   message:
                     type: string
                   data:
-                    $ref: ./schemas.yml#/schemas/toko
+                    $ref: ./schemas.json#/schemas/toko
               example:
                 error: false
                 message: OK
@@ -12494,7 +12494,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: ./schemas.yml#/schemas/twibbon_pagination
+                          $ref: ./schemas.json#/schemas/twibbon_pagination
               example:
                 error: false
                 message: OK
@@ -12710,7 +12710,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: ./schemas.yml#/schemas/twibbon_pagination
+                          $ref: ./schemas.json#/schemas/twibbon_pagination
               example:
                 error: false
                 message: OK
@@ -12891,7 +12891,7 @@ paths:
                   message:
                     type: string
                   data:
-                    $ref: ./schemas.yml#/schemas/twibbon
+                    $ref: ./schemas.json#/schemas/twibbon
               example:
                 error: false
                 message: OK
@@ -13480,7 +13480,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: ./schemas.yml#/schemas/twitter_pagination
+                          $ref: ./schemas.json#/schemas/twitter_pagination
               example:
                 error: false
                 message: OK
@@ -13701,7 +13701,7 @@ paths:
                       title:
                         type: string
                       created:
-                        $ref: ./schemas.yml#/schemas/idate
+                        $ref: ./schemas.json#/schemas/idate
               example:
                 error: false
                 message: OK
@@ -13880,7 +13880,7 @@ paths:
                   message:
                     type: string
                   data:
-                    $ref: ./schemas.yml#/schemas/twitter
+                    $ref: ./schemas.json#/schemas/twitter
               example:
                 error: false
                 message: OK
@@ -14272,7 +14272,7 @@ paths:
                   message:
                     type: string
                   data:
-                    $ref: ./schemas.yml#/schemas/url_shortener_pagination
+                    $ref: ./schemas.json#/schemas/url_shortener_pagination
               example:
                 error: false
                 message: OK
@@ -14480,7 +14480,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: ./schemas.yml#/schemas/url_shortener_pagination
+                          $ref: ./schemas.json#/schemas/url_shortener_pagination
               example:
                 error: false
                 message: OK
@@ -14807,7 +14807,7 @@ paths:
                   message:
                     type: string
                   data:
-                    $ref: ./schemas.yml#/schemas/basic_profile
+                    $ref: ./schemas.json#/schemas/basic_profile
               example:
                 error: false
                 message: OK
@@ -14973,7 +14973,7 @@ paths:
                   message:
                     type: string
                   data:
-                    $ref: ./schemas.yml#/schemas/user
+                    $ref: ./schemas.json#/schemas/user
               example:
                 error: false
                 message: OK
@@ -15777,7 +15777,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: ./schemas.yml#/schemas/user_room_pagination
+                          $ref: ./schemas.json#/schemas/user_room_pagination
               example:
                 error: false
                 message: OK
@@ -16590,7 +16590,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: ./schemas.yml#/schemas/user_room_pagination
+                          $ref: ./schemas.json#/schemas/user_room_pagination
               example:
                 error: false
                 message: OK
@@ -17205,7 +17205,7 @@ paths:
                       data:
                         type: array
                         items:
-                          $ref: ./schemas.yml#/schemas/files_pagination
+                          $ref: ./schemas.json#/schemas/files_pagination
               example:
                 error: false
                 message: OK
@@ -17313,4 +17313,3 @@ components:
             toko: Read access to toko items
             url-shortener: Access to url shortener endpoint
             user: Read access to user endpoint
-
