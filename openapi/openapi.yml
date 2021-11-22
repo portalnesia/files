@@ -19,7 +19,6 @@ servers:
   - url: https://api.portalnesia.com
     description: Portalnesia API Server
 tags:
-  - name: Authentication
   - name: Blog
   - name: Comments
   - name: Chord
@@ -2154,7 +2153,7 @@ paths:
           required: true
           description: |-
             Content type of comments.    
-            `news`, `twitter_thread`, `blog`, `chord`, `event`
+            `news`, `twitter_thread`, `blog`, `chord`
           example: blog
         - name: content_id
           in: path
@@ -2448,7 +2447,7 @@ paths:
           required: true
           description: |-
             Content type of comments.    
-            `news`, `twitter_thread`, `blog`, `chord`, `event`
+            `news`, `twitter_thread`, `blog`, `chord`
           example: blog
         - name: content_id
           in: path
@@ -2667,7 +2666,7 @@ paths:
           required: true
           description: |-
             Content type of comments.    
-            `news`, `twitter_thread`, `blog`, `chord`, `event`
+            `news`, `twitter_thread`, `blog`, `chord`
           example: blog
         - name: content_id
           in: path
@@ -2888,7 +2887,7 @@ paths:
           required: true
           description: |-
             Content type of comments.    
-            `news`, `twitter_thread`, `blog`, `chord`, `event`
+            `news`, `twitter_thread`, `blog`, `chord`
           example: blog
         - name: content_id
           in: path
@@ -17631,10 +17630,8 @@ paths:
                       thumbs: https://content.portalnesia.com/......
                       url: https://....
 security:
-  - OauthUser:
-      - basic
-  - OauthClient:
-      - basic
+  - OauthUser: []
+  - OauthClient: []
 components:
   schemas:
     toko_transaction_post:
@@ -17670,7 +17667,6 @@ components:
           refreshUrl: https://accounts.portalnesia.com/oauth/token
           tokenUrl: https://accounts.portalnesia.com/oauth/token
           scopes:
-            basic: Basic access to endpoint.
             email: Get user email
             blog: Access blog endpoint, have read and write access to user's blog
             comments: >-
@@ -17708,7 +17704,6 @@ components:
           tokenUrl: https://accounts.portalnesia.com/oauth/token
           refreshUrl: https://accounts.portalnesia.com/oauth/token
           scopes:
-            basic: Basic read access.
             blog: Read access to blog endpoint
             chord: Read access to chord endpoint
             comments: Read access to comments endpoint
