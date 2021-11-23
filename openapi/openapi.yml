@@ -2454,6 +2454,7 @@ paths:
           schema:
             type: integer
           required: true
+          description: Content ID
           example: '123456'
       responses:
         '200':
@@ -5455,7 +5456,7 @@ paths:
                   - 12623630.255957223  5906238.113504741
                   - '-8012405.882330522  5078408.567466255'
                   - '-8123725.373123796  5228082.65572351'
-  /v1/like:
+  /v1/likes:
     get:
       tags:
         - Likes
@@ -5473,7 +5474,7 @@ paths:
           label: Shell + Curl
           source: |-
             curl --request GET \
-              --url https://api.portalnesia.com/v1/like \
+              --url https://api.portalnesia.com/v1/likes \
               --header 'Authorization: Bearer REPLACE_BEARER_TOKEN' \
               --header 'PN-Client-Id: Your client id'
         - lang: javascript
@@ -5488,7 +5489,7 @@ paths:
                 }
             }
 
-            axios.get('https://api.portalnesia.com/v1/like',config)
+            axios.get('https://api.portalnesia.com/v1/likes',config)
             .then(function(response){
               console.log(response.data)
             })
@@ -5513,7 +5514,7 @@ paths:
             });
 
 
-            xhr.open("GET", "https://api.portalnesia.com/v1/like");
+            xhr.open("GET", "https://api.portalnesia.com/v1/likes");
 
             xhr.setRequestHeader("PN-Client-Id", "Your client id");
 
@@ -5530,7 +5531,7 @@ paths:
             $curl = curl_init();
 
             curl_setopt_array($curl, [
-              CURLOPT_URL => "https://api.portalnesia.com/v1/like",
+              CURLOPT_URL => "https://api.portalnesia.com/v1/likes",
               CURLOPT_RETURNTRANSFER => true,
               CURLOPT_ENCODING => "",
               CURLOPT_MAXREDIRS => 10,
@@ -5565,7 +5566,7 @@ paths:
                 'Authorization': "Bearer REPLACE_BEARER_TOKEN"
                 }
 
-            conn.request("GET", "/v1/like", headers=headers)
+            conn.request("GET", "/v1/likes", headers=headers)
 
             res = conn.getresponse()
             data = res.read()
@@ -5575,7 +5576,7 @@ paths:
           label: Java + Unirest
           source: >-
             HttpResponse<String> response =
-            Unirest.get("https://api.portalnesia.com/v1/like")
+            Unirest.get("https://api.portalnesia.com/v1/likes")
               .header("PN-Client-Id", "Your client id")
               .header("Authorization", "Bearer REPLACE_BEARER_TOKEN")
               .asString();
@@ -5627,8 +5628,7 @@ paths:
                   data:
                     - type: thread
                       data:
-                        - like_id: 1234
-                          id: '123456789'
+                        - id: '123456789'
                           title: 'Threads by @twitter_username: THREAD TEXT'
                           name: Name
                           screen_name: screen_name
@@ -5676,7 +5676,7 @@ paths:
                             username: username
                             name: Name
                             picture: https://content.portalnesia.com/.....
-  /v1/like/{type}:
+  /v1/likes/{type}:
     get:
       tags:
         - Likes
@@ -5694,7 +5694,7 @@ paths:
           label: Shell + Curl
           source: |-
             curl --request GET \
-              --url 'https://api.portalnesia.com/v1/like/thread?page=1&per_page=1' \
+              --url 'https://api.portalnesia.com/v1/likes/thread?page=1&per_page=15' \
               --header 'Authorization: Bearer REPLACE_BEARER_TOKEN' \
               --header 'PN-Client-Id: Your client id'
         - lang: javascript
@@ -5709,7 +5709,7 @@ paths:
                 }
             }
 
-            axios.get('https://api.portalnesia.com/v1/like/{type}',config)
+            axios.get('https://api.portalnesia.com/v1/likes/{type}',config)
             .then(function(response){
               console.log(response.data)
             })
@@ -5735,7 +5735,7 @@ paths:
 
 
             xhr.open("GET",
-            "https://api.portalnesia.com/v1/like/thread?page=1&per_page=1");
+            "https://api.portalnesia.com/v1/likes/thread?page=1&per_page=15");
 
             xhr.setRequestHeader("PN-Client-Id", "Your client id");
 
@@ -5752,7 +5752,7 @@ paths:
             $curl = curl_init();
 
             curl_setopt_array($curl, [
-              CURLOPT_URL => "https://api.portalnesia.com/v1/like/thread?page=1&per_page=1",
+              CURLOPT_URL => "https://api.portalnesia.com/v1/likes/thread?page=1&per_page=15",
               CURLOPT_RETURNTRANSFER => true,
               CURLOPT_ENCODING => "",
               CURLOPT_MAXREDIRS => 10,
@@ -5789,7 +5789,7 @@ paths:
                 'Authorization': "Bearer REPLACE_BEARER_TOKEN"
                 }
 
-            conn.request("GET", "/v1/like/thread?page=1&per_page=1",
+            conn.request("GET", "/v1/likes/thread?page=1&per_page=15",
             headers=headers)
 
 
@@ -5803,7 +5803,7 @@ paths:
           label: Java + Unirest
           source: >-
             HttpResponse<String> response =
-            Unirest.get("https://api.portalnesia.com/v1/like/thread?page=1&per_page=1")
+            Unirest.get("https://api.portalnesia.com/v1/likes/thread?page=1&per_page=15")
               .header("PN-Client-Id", "Your client id")
               .header("Authorization", "Bearer REPLACE_BEARER_TOKEN")
               .asString();
@@ -5833,7 +5833,7 @@ paths:
             Number of total data per page.   
             Default 15   
             Max 50
-          example: '1'
+          example: '15'
         - name: type
           in: path
           schema:
@@ -5897,15 +5897,14 @@ paths:
                   data:
                     type: thread
                     data:
-                      - like_id: 1234
-                        id: '123456789'
+                      - id: '123456789'
                         title: 'Threads by @twitter_username: THREAD TEXT'
                         name: Name
                         screen_name: screen_name
                         created:
                           time_ago: 2 years ago
                           timestamp: 1579531646
-  /v1/like/{type}/{like_id}:
+  /v1/likes/{type}/{content_id}:
     delete:
       tags:
         - Likes
@@ -5923,7 +5922,7 @@ paths:
           label: Shell + Curl
           source: |-
             curl --request DELETE \
-              --url https://api.portalnesia.com/v1/like/TYPE/ID \
+              --url https://api.portalnesia.com/v1/likes/TYPE/%7Bcontent_id%7D \
               --header 'Authorization: Bearer REPLACE_BEARER_TOKEN' \
               --header 'PN-Client-Id: Your client id'
         - lang: javascript
@@ -5940,7 +5939,7 @@ paths:
             }
 
 
-            axios.delete('https://api.portalnesia.com/v1/like/{type}/{like_id}',config)
+            axios.delete('https://api.portalnesia.com/v1/likes/{type}/{content_id}',config)
 
             .then(function(response){
               console.log(response.data)
@@ -5967,7 +5966,8 @@ paths:
             });
 
 
-            xhr.open("DELETE", "https://api.portalnesia.com/v1/like/TYPE/ID");
+            xhr.open("DELETE",
+            "https://api.portalnesia.com/v1/likes/TYPE/%7Bcontent_id%7D");
 
             xhr.setRequestHeader("PN-Client-Id", "Your client id");
 
@@ -5984,7 +5984,7 @@ paths:
             $curl = curl_init();
 
             curl_setopt_array($curl, [
-              CURLOPT_URL => "https://api.portalnesia.com/v1/like/TYPE/ID",
+              CURLOPT_URL => "https://api.portalnesia.com/v1/likes/TYPE/%7Bcontent_id%7D",
               CURLOPT_RETURNTRANSFER => true,
               CURLOPT_ENCODING => "",
               CURLOPT_MAXREDIRS => 10,
@@ -6009,27 +6009,33 @@ paths:
             }
         - lang: python
           label: Python + Python3
-          source: |-
+          source: >-
             import http.client
 
+
             conn = http.client.HTTPSConnection("api.portalnesia.com")
+
 
             headers = {
                 'PN-Client-Id': "Your client id",
                 'Authorization': "Bearer REPLACE_BEARER_TOKEN"
                 }
 
-            conn.request("DELETE", "/v1/like/TYPE/ID", headers=headers)
+            conn.request("DELETE", "/v1/likes/TYPE/%7Bcontent_id%7D",
+            headers=headers)
+
 
             res = conn.getresponse()
+
             data = res.read()
+
 
             print(data.decode("utf-8"))
         - lang: java
           label: Java + Unirest
           source: >-
             HttpResponse<String> response =
-            Unirest.delete("https://api.portalnesia.com/v1/like/TYPE/ID")
+            Unirest.delete("https://api.portalnesia.com/v1/likes/TYPE/%7Bcontent_id%7D")
               .header("PN-Client-Id", "Your client id")
               .header("Authorization", "Bearer REPLACE_BEARER_TOKEN")
               .asString();
@@ -6054,13 +6060,12 @@ paths:
             The specific type of content.    
             `chord`,`blog`,`thread`
           example: TYPE
-        - name: like_id
+        - name: content_id
           in: path
           schema:
             type: string
           required: true
-          description: The `like_id` of content
-          example: ID
+          description: Content ID
       responses:
         '200':
           description: OK
@@ -6073,9 +6078,16 @@ paths:
                     type: boolean
                   message:
                     type: string
+                  data:
+                    type: object
+                    properties:
+                      liked:
+                        type: boolean
               example:
                 error: false
                 message: OK
+                data:
+                  liked: false
   /v1/messages/room:
     get:
       tags:
