@@ -497,9 +497,19 @@ paths:
                     type: boolean
                   message:
                     type: string
+                  data:
+                    type: object
+                    properties:
+                      slug:
+                        type: string
+                      publish:
+                        type: boolean
               example:
                 error: false
                 message: OK
+                data:
+                  slug: slug-name
+                  publish: false
     get:
       tags:
         - Blog
